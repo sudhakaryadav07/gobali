@@ -1,8 +1,8 @@
-import Login from "views/loginmanagement/login";
-import EmailVerification from "views/loginmanagement/emailVerification";
-import ChangePassword from "views/loginmanagement/changePassword";
-import OtpVerification from "views/loginmanagement/otpVerification";
-import SuccessfullyUpdatePassword from "views/loginmanagement/successfullyUpdatePassword";
+import Login from "screens/loginmanagement/login";
+import EmailVerification from "screens/loginmanagement/emailVerification";
+import ChangePassword from "screens/loginmanagement/changePassword";
+import OtpVerification from "screens/loginmanagement/otpVerification";
+import SuccessfullyUpdatePassword from "screens/loginmanagement/successfullyUpdatePassword";
 
 var routes = [
   {
@@ -18,7 +18,8 @@ var routes = [
     icon: "ni ni-key-25 text-info",
     component: EmailVerification,
     layout: "/auth"
-  }, {
+  },
+  {
     path: "/ChangePassword",
     name: "ChangePassword",
     icon: "ni ni-key-25 text-info",
@@ -30,7 +31,8 @@ var routes = [
     icon: "ni ni-key-25 text-info",
     component: OtpVerification,
     layout: "/auth"
-  }, {
+  },
+  {
     path: "/successfullyUpdatePassword",
     name: "SuccessfullyUpdatePassword",
     icon: "ni ni-key-25 text-info",

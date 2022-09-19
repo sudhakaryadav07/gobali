@@ -37,6 +37,7 @@
     // Vetical align table content
 
     &.align-items-center {
+
         td,
         th {
             vertical-align: middle;
@@ -44,9 +45,9 @@
     }
 
 
-   // Styles for dark table
+    // Styles for dark table
 
-   .thead-dark {
+    .thead-dark {
         th {
             background-color: $table-dark-head-bg;
             color: $table-dark-head-color;
@@ -77,6 +78,7 @@
 // Flush tables
 
 .table-flush {
+
     td,
     th {
         border-left: 0;
@@ -86,6 +88,7 @@
     tbody {
         tr {
             &:first-child {
+
                 td,
                 th {
                     border-top: 0;
@@ -93,6 +96,7 @@
             }
 
             &:last-child {
+
                 td,
                 th {
                     border-bottom: 0;

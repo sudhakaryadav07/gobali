@@ -1,25 +1,11 @@
-import Table from "views/examples/Tables";
+import CityScreen from "./screens/city/CityScreen.js";
 
 var routes = [
   {
     path: "/tables",
-    name: "Dashboard",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Table,
-    layout: "/admin"
-  },
-  {
-    path: "/tables",
     name: "User Management",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Table,
-    layout: "/admin"
-  },
-  {
-    path: "/tables",
-    name: "Project Management",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Table,
+    // icon: "ni ni-bullet-list-67 text-red",
+    component: CityScreen,
     layout: "/admin"
   }
 ];
