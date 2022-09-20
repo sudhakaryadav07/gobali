@@ -1,4 +1,4 @@
-import { Checkbox } from '../../../components/common/Checkbox.js';
+import { Checkbox } from '../../../components/Common/Checkbox.js';
 import React from 'react'
 import { Media, Table, Label as DisplayLabel } from "reactstrap";
 // import { Button, DisplayLabel } from '../../../components/common/index';

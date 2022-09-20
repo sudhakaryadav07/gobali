@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'reactstrap';
 
-const SelectField = ({ placeholder, className, error, size, required, disabled, value, options, onChange }) => {
+export const SelectField = ({ placeholder, className, error, size, required, disabled, value, options, onChange }) => {
    try {
       return (
          <Input
@@ -39,5 +39,3 @@ SelectField.defaultProps = {
    options: [],
    value: '',
 };
-
-export default SelectField;

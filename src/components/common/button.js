@@ -1,6 +1,6 @@
 import { Button as ButtonComponent } from "reactstrap";
 
-const Button = ({ label, outline, className, color, onSubmit }) => {
+export const Button = ({ label, outline, className, color, onSubmit }) => {
     return (
         <div className="text-center">
             <ButtonComponent
@@ -13,4 +13,5 @@ const Button = ({ label, outline, className, color, onSubmit }) => {
     )
 }
 
-export default Button;
+
+export default Button

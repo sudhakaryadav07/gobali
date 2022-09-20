@@ -1,4 +1,4 @@
-import Button from "../common/Button";
+import { Button } from "../../components/Common/Button.js";
 import { Link } from "react-router-dom";
 import {
   DropdownMenu,

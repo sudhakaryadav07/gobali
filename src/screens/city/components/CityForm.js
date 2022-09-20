@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FormGroup, Input, Label, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from "reactstrap";
 import { FLAGS } from '../../../config/constants';
-import { QuillEditor, Button, Loader, Asterisk, Message, InputField, SelectField, InputErrorMessage } from '../../../components/common/index';
+import { QuillEditor, Button, Loader, Asterisk, Message, InputField, SelectField, InputErrorMessage } from '../../../components/Common/index';
 import { validateCity, validateImageName } from '../../../utils/common/validate';
 
 const CityCreate = ({ mode, authAccess, cityList, cityObj, handleUpload, setShowForm, handleSubmit }) => {

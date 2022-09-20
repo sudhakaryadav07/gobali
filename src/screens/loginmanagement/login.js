@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import MessageHandler from "../../components/common/Alert";
+import { Alert } from "../../components/Common/Alert.js";
 import {
   Card,
   CardHeader,
@@ -15,10 +15,10 @@ import {
   InputGroup
 } from "reactstrap";
 import { loginValidation } from '../../utils/helper';
-import InputBox from "../../components/common/Inputbox";
-import PasswordBox from "../../components/common/Passwordbox";
-import Button from "../../components/common/Button";
-import { Checkbox } from "../../components/common/Checkbox.js";
+import InputBox from "../../components/Common/Inputbox.js";
+import PasswordBox from "../../components/Common/Passwordbox.js";
+import { Button } from "../../components/Common/Button.js";
+import { Checkbox } from "../../components/Common/Checkbox.js";
 
 const Login = () => {
 
@@ -64,7 +64,7 @@ const Login = () => {
     <Container className="pt-lg-7">
       <Row className="justify-content-center">
         <Col lg="7">
-          {loginStatus ? <MessageHandler status="success" msg="Login Successful !" /> : ""}
+          {loginStatus ? <Alert status="success" msg="Login Successful !" /> : ""}
           <Card className="bg-secondary shadow border-0">
             <CardHeader className="bg-white text-center pb-0">
               <img alt="" src={require("../../assets/img/icons/usermanagement/tata-power-icon.png")} />

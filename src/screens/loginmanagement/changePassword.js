@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import MessageHandler from "../../components/common/Alert";
+import { Alert } from "../../components/Common/Alert.js";
 import {
   Card,
   CardHeader,
@@ -11,8 +11,8 @@ import {
   Col
 } from "reactstrap";
 import { changePasswordValidation } from '../../utils/helper';
-import PasswordBox from "../../components/common/Passwordbox";
-import Button from "../../components/common/Button";
+import PasswordBox from "../../components/Common/Passwordbox";
+import Button from "../../components/Common/Button";
 
 const ChangePassword = () => {
 
@@ -46,7 +46,7 @@ const ChangePassword = () => {
   const renderPasswordMessages = () => {
     try {
       if (errors.matchpassword.status) {
-        return <MessageHandler status="danger" msg={errors.matchpassword.message} />
+        return <Alert status="danger" msg={errors.matchpassword.message} />
       }
       return null
     } catch (e) {

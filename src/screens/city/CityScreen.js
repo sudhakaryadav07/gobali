@@ -1,21 +1,21 @@
 
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import { Card, FormGroup, CardBody, InputGroupAddon, InputGroup, InputGroupText, Label, Col, CardHeader, Container, Row } from "reactstrap";
+import React, { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { FormGroup, Label, Col, Container, Row } from "reactstrap";
 import UserHeader from "../../components/Headers/UserHeader";
 import CityView from './components/CityView';
 // import CityForm from './components//CityForm';
 
-import { fetchAllCity, createCity, updateCity } from '../../store/city/cityActions';
+// import { fetchAllCity, createCity, updateCity } from '../../store/city/cityActions';
 // import { InputField, ScrollWrapper, Button, Loader } from './components/';
-import Button from '../../components/common/Button.js';
-import InputBox from '../../components/common/Inputbox.js';
+import { Button } from '../../components/Common/Button.js';
+import InputBox from '../../components/Common/Inputbox.js';
 
 import { uploadFile } from "../../utils/common/UploadUtil";
-import ScrollWrapper from "components/common/ScrollWrapper";
-import SelectField from "components/common/SelectField";
+import { ScrollWrapper } from "../../components/Common/ScrollWrapper.js";
+import { SelectField } from "../../components/Common/SelectField.js";
 import { FLAG, DATA } from "config/constants";
-import { Pagination } from "components/pagination";
+import { Pagination } from "../../components/Common/Pagination";
 
 
 let DISTRICT_ADMIN = "ABC"
