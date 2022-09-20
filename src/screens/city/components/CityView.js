@@ -1,4 +1,4 @@
-import { Checkbox } from 'components/common/checkbox';
+import { Checkbox } from '../../../components/common/Checkbox.js';
 import React from 'react'
 import { Media, Table, Label as DisplayLabel } from "reactstrap";
 // import { Button, DisplayLabel } from '../../../components/common/index';
@@ -17,11 +17,11 @@ const CityView = ({ loading, authAccess, data, handleForm }) => {
                                 <th scope="col" className="col-2">Email Address</th>
                                 <th scope="col" className="col-2">Location</th>
                                 <th scope="col" className="col-2">Joined</th>
-                                <th scope="col" className="col-2">Permissions</th>
+                                <th scope="col" className="col-2" style={{ color: 'orange' }}>Permissions</th>
                                 <th scope="col" className="col-1"><i class="fa fa-calendar" aria-hidden="true"></i></th>
                             </tr>
                         </thead>
-                        <tbody style={{ minHeight: 100 }}>
+                        <tbody>
                             {data.map((data, i) => {
                                 return (
                                     <tr key={i}>

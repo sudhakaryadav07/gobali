@@ -3,7 +3,6 @@ import { Input } from 'reactstrap';
 
 const SelectField = ({ placeholder, className, error, size, required, disabled, value, options, onChange }) => {
    try {
-      let optionArr = [{ key: 0, name: "Select", value: "" }].concat(options);
       return (
          <Input
             type='select'
@@ -20,7 +19,7 @@ const SelectField = ({ placeholder, className, error, size, required, disabled, 
             isInvalid={error}
          >
             {
-               optionArr.map((val, idx) => (
+               options.map((val, idx) => (
                   <option value={val.value} key={`${val.name}:${idx}`}>
                      {val.name}
                   </option>

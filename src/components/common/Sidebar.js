@@ -6,6 +6,7 @@ import {
   Collapse,
   DropdownMenu,
   DropdownItem,
+  NavbarBrand,
   UncontrolledDropdown,
   DropdownToggle,
   Form,
@@ -89,11 +90,11 @@ const Sidebar = (props) => {
         </button>
         {/* Brand */}
         {logo ? (
-          // <NavbarBrand className="pt-0" {...navbarBrandProps}>
-          <img alt=""
-            style={{ fontSize: "30px" }}
-            src={require("../../assets/img/icons/usermanagement/tata-power-icon.png")} />
-          // </NavbarBrand>
+          <NavbarBrand className="pt-0 pb-0"  {...navbarBrandProps}>
+            <img alt=""
+              style={{ minWidth: 76, minHeight: 51 }}
+              src={require("../../assets/img/icons/usermanagement/user-tata-power.png")} />
+          </NavbarBrand>
         ) : null}
         {/* User */}
         <Nav className="align-items-center d-md-none">

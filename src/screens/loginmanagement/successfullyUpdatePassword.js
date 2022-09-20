@@ -1,4 +1,4 @@
-import Button from "../../components/common/button";
+import Button from "../../components/common/Button";
 import { useHistory } from "react-router-dom";
 import {
   Card,

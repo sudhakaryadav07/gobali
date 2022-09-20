@@ -8,8 +8,8 @@ import CityView from './components/CityView';
 
 import { fetchAllCity, createCity, updateCity } from '../../store/city/cityActions';
 // import { InputField, ScrollWrapper, Button, Loader } from './components/';
-import Button from '../../components/common/button.js';
-import InputBox from '../../components/common/inputbox.js';
+import Button from '../../components/common/Button.js';
+import InputBox from '../../components/common/Inputbox.js';
 
 import { uploadFile } from "../../utils/common/UploadUtil";
 import ScrollWrapper from "components/common/ScrollWrapper";
@@ -145,7 +145,7 @@ const CityScreen = () => {
     <>
       <UserHeader />
       <Container className="p-0 display-content secondary">
-        <Row sm="12" md="12" lg="12" className="mt-5 mr-3 ml-3 mb-5">
+        <Row sm="12" md="12" lg="12" className="mt-4 mr-3 ml-3 mb-5">
           <Col sm="12" md="12" lg="12">
             <Row className="ml-1"><h2 className="label-color">User Management</h2></Row>
             <Row >
@@ -165,8 +165,7 @@ const CityScreen = () => {
                     value="activeflag"
                     className="mt-11"
                     size="medium"
-                    placeholder="Search Name..."
-                    options={FLAG}
+                    options={[{ key: 0, name: "Permission", value: "" }].concat(FLAG)}
                   />
                 </FormGroup>
               </Col>
@@ -176,20 +175,17 @@ const CityScreen = () => {
                     value="activeflag"
                     size="medium"
                     className="mt-11"
-                    placeholder="Status"
-                    options={FLAG}
+                    options={[{ key: 0, name: "Joined", value: "" }].concat(FLAG)}
                   />
                 </FormGroup>
               </Col>
               <Col sm="12" md="12" lg="3" />
-              <Col sm="12" md="12" lg="1">
+              <Col sm="12" md="12" lg="3" className="d-flex justify-content-end">
                 <Button
                   color="primary"
-                  className="mt-4"
+                  className="mt-4 mr-4"
                   label="Export"
                 />
-              </Col>
-              <Col sm="12" md="12" lg="2">
                 <Button
                   color="warning"
                   disabled={false}

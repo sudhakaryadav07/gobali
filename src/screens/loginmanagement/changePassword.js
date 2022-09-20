@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import MessageHandler from "../../components/common/alert";
+import MessageHandler from "../../components/common/Alert";
 import {
   Card,
   CardHeader,
@@ -11,8 +11,8 @@ import {
   Col
 } from "reactstrap";
 import { changePasswordValidation } from '../../utils/helper';
-import PasswordBox from "../../components/common/passwordbox";
-import Button from "../../components/common/button";
+import PasswordBox from "../../components/common/Passwordbox";
+import Button from "../../components/common/Button";
 
 const ChangePassword = () => {
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import MessageHandler from "../../components/common/alert";
+import MessageHandler from "../../components/common/Alert";
 import {
   Card,
   CardHeader,
@@ -11,8 +11,8 @@ import {
   Col,
 } from "reactstrap";
 import { emailValidation } from '../../utils/helper';
-import InputBox from "../../components/common/inputbox";
-import Button from "../../components/common/button";
+import InputBox from "../../components/common/Inputbox";
+import Button from "../../components/common/Button";
 
 const EmailVerification = () => {
 
