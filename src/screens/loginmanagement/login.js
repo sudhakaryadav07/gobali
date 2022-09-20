@@ -18,6 +18,7 @@ import { loginValidation } from '../../utils/helper';
 import InputBox from "../../components/common/inputbox";
 import PasswordBox from "../../components/common/passwordbox";
 import Button from "../../components/common/button";
+import { Checkbox } from "components/common/checkbox";
 
 const Login = () => {
 
@@ -109,19 +110,10 @@ const Login = () => {
                   </Col>
                 </Row>
                 <Label className="error-label">{errors ? errors.securityText.message : false}</Label>
-                <div className="custom-control custom-control-alternative custom-checkbox">
-                  <input
-                    className="custom-control-input"
-                    id=" customCheckLogin"
-                    type="checkbox" />
-                  <label
-                    className="custom-control-label"
-                    htmlFor=" customCheckLogin">
-                    <span>Remember me on this computer</span>
-                  </label>
-                </div>
+                <Checkbox label="Remember me on this computer" />
                 <Button
                   label="LOG IN"
+                  color="primary"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
               <Row>

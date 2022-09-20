@@ -6,8 +6,9 @@
 
 .ct-example-row {
   .row {
-    > .col,
-    > [class^="col-"] {
+
+    >.col,
+    >[class^="col-"] {
       span {
         display: block;
         padding: .75rem;
@@ -22,8 +23,9 @@
   }
 
   .no-gutters {
-    > .col,
-    > [class^="col-"] {
+
+    >.col,
+    >[class^="col-"] {
       span {
         border-radius: 0;
       }
@@ -42,7 +44,7 @@
   min-height: 10rem;
   background-color: rgba(255, 0, 0, .1);
 
-  & + .row {
+  &+.row {
     margin-top: 1rem;
   }
 }
@@ -122,6 +124,8 @@
 
 .ct-example-container-fluid {
   max-width: none;
+  display: contents;
+  justify-content: flex-end;
 }
 
 
@@ -139,12 +143,12 @@
     margin-left: 0;
   }
 
-  + .highlight,
-  + .clipboard + .highlight {
+  +.highlight,
+  +.clipboard+.highlight {
     margin-top: 0;
   }
 
-  + p {
+  +p {
     margin-top: 2rem;
   }
 
@@ -157,21 +161,21 @@
     }
   }
 
-  .custom-file-input:lang(es) ~ .custom-file-label::after {
+  .custom-file-input:lang(es)~.custom-file-label::after {
     content: "Elegir";
   }
 
-  > .form-control {
-    + .form-control {
+  >.form-control {
+    +.form-control {
       margin-top: .5rem;
     }
   }
 
-  > .nav + .nav,
-  > .alert + .alert,
-  > .navbar + .navbar,
-  > .progress + .progress,
-  > .progress + .btn,
+  >.nav+.nav,
+  >.alert+.alert,
+  >.navbar+.navbar,
+  >.progress+.progress,
+  >.progress+.btn,
   .badge,
   .btn {
     margin-top: .5rem;
@@ -181,6 +185,7 @@
   .btn-group {
     margin-top: .5rem;
     margin-bottom: .5rem;
+
     .btn {
       margin: 0;
     }
@@ -189,7 +194,7 @@
   .alert {
     margin: 0;
 
-    + .alert {
+    +.alert {
       margin-top: 1.25rem;
     }
   }
@@ -198,16 +203,16 @@
     margin-right: .5rem;
   }
 
-  > .dropdown-menu:first-child {
+  >.dropdown-menu:first-child {
     position: static;
     display: block;
   }
 
-  > .form-group:last-child {
+  >.form-group:last-child {
     margin-bottom: 0;
   }
 
-  > .close {
+  >.close {
     float: none;
   }
 }
@@ -219,10 +224,12 @@
       color: #999;
       vertical-align: middle;
     }
+
     td {
       padding: 1rem 0;
       border-color: #eee;
     }
+
     tr:first-child td {
       border-top: 0;
     }
@@ -245,57 +252,64 @@
 }
 
 // Images
-.ct-example > img {
-  + img {
+.ct-example>img {
+  +img {
     margin-left: .5rem;
   }
 }
 
 // Buttons
 .ct-example {
-  > .btn-group {
+  >.btn-group {
     margin-top: .25rem;
     margin-bottom: .25rem;
   }
-  > .btn-toolbar + .btn-toolbar {
+
+  >.btn-toolbar+.btn-toolbar {
     margin-top: .5rem;
   }
 }
 
 // Forms
 .ct-example-control-sizing select,
-.ct-example-control-sizing input[type="text"] + input[type="text"] {
+.ct-example-control-sizing input[type="text"]+input[type="text"] {
   margin-top: .5rem;
 }
+
 .ct-example-form .input-group {
   margin-bottom: .5rem;
 }
-.ct-example > textarea.form-control {
+
+.ct-example>textarea.form-control {
   resize: vertical;
 }
 
 // List groups
-.ct-example > .list-group {
+.ct-example>.list-group {
   max-width: 400px;
 }
 
 // Navbars
 .ct-example {
+
   .fixed-top,
   .sticky-top {
     position: static;
     margin: -1rem -1rem 1rem;
   }
+
   .fixed-bottom {
     position: static;
     margin: 1rem -1rem -1rem;
   }
 
   @include media-breakpoint-up(sm) {
+
     .fixed-top,
     .sticky-top {
       margin: -1.5rem -1.5rem 1rem;
     }
+
     .fixed-bottom {
       margin: 1rem -1.5rem -1.5rem;
     }
@@ -440,10 +454,10 @@
 
   .tab-content {
     .tab-example-result {
-        background-color: #f5f7f9;
-        border: 1px solid #e6ecf1;
-        padding: 1.25rem;
-        border-radius: .25rem;
+      background-color: #f5f7f9;
+      border: 1px solid #e6ecf1;
+      padding: 1.25rem;
+      border-radius: .25rem;
     }
   }
 
@@ -465,6 +479,7 @@
 .icon-examples {
   margin-top: 1rem;
 }
+
 .btn-icon-clipboard {
   margin: 0px;
   padding: 24px;
@@ -490,7 +505,7 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 16px;
   }
 
-  > div {
+  >div {
     align-items: center;
     display: flex;
   }

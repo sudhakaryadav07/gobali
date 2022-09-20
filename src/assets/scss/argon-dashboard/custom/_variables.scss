@@ -72,7 +72,7 @@ $colors: map-merge(("blue": $blue,
 
 $default: #172b4d !default;
 $primary: #1261A9 !default;
-$secondary: #f7fafc !default;
+$secondary: #E5E5E5 !default;
 $success: $green  !default;
 $info: $teal  !default;
 $warning: $orange  !default;
@@ -442,12 +442,12 @@ $table-border-width: $border-width  !default;
 $table-border-color: $gray-200  !default;
 
 $table-head-bg: $gray-100  !default;
-$table-head-color: $gray-600  !default;
+$table-head-color: $white  !default;
 $table-head-spacer-y: .75rem !default;
 
-$table-head-font-size: .65rem !default;
-$table-head-font-weight: $font-weight-bold  !default;
-$table-head-text-transform: uppercase !default;
+$table-head-font-size: 0.8rem !default;
+$table-head-font-weight: $font-weight-normal  !default;
+$table-head-text-transform: none !default;
 $table-head-letter-spacing: 1px !default;
 
 $table-body-font-size: .8125rem !default;
@@ -728,7 +728,7 @@ $navbar-dark-hover-bg: rgba(255, 255, 255, .1) !default;
 $navbar-dark-active-bg: rgba(255, 255, 255, .1) !default;
 $navbar-dark-color: rgba($white, .95) !default;
 $navbar-dark-hover-color: rgba($white, .65) !default;
-$navbar-dark-active-color: rgba($white, .65) !default;
+$navbar-dark-active-color: $white;
 $navbar-dark-disabled-color: rgba($white, .25) !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
@@ -743,7 +743,7 @@ $navbar-light-active-bg: rgba(0, 0, 0, .1) !default;
 $navbar-light-border-color: $gray-100  !default;
 $navbar-light-color: rgba($black, .5) !default;
 $navbar-light-hover-color: rgba($black, .7) !default;
-$navbar-light-active-color: rgba($black, .9) !default;
+$navbar-light-active-color: $white  !default;
 $navbar-light-disabled-color: rgba($black, .3) !default;
 $navbar-light-toggler-border-color: transparent !default;
 

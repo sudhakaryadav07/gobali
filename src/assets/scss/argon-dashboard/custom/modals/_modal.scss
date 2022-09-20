@@ -10,6 +10,7 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+
     .modal-content {
         border-radius: 0;
     }
@@ -18,8 +19,14 @@
 
 // Background color variations
 
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
     .modal-#{$color} {
         @include modal-variant($value);
     }
+}
+
+
+.display-content {
+    display: contents;
 }

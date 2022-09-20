@@ -103,10 +103,10 @@ const Sidebar = (props) => {
 
   return (
     <Navbar
-      className="navbar-vertical fixed-left navbar-light bg-white"
+      color="primary"
+      className="navbar-vertical fixed-left navbar-light"
       expand="md"
-      id="sidenav-main"
-    >
+      id="sidenav-main">
       <Container fluid>
         {/* Toggler */}
         <button

@@ -55,6 +55,7 @@ const OtpVerification = () => {
                   </Row>
                   <Button
                     label="CONTINUE"
+                    color="primary"
                     onSubmit={() => history.push("/auth/changePassword")} />
                 </div>
                 <Row className="text-center">

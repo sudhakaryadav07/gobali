@@ -76,7 +76,7 @@ const Admin = (props) => {
           imgAlt: "..."
         }}
       />
-      <div className="main-content" ref={mainContent}>
+      <div className="main-content" ref={mainContent} >
         <AdminNavbar
           {...props}
           brandText={getBrandText(props.location.pathname)}
@@ -85,9 +85,9 @@ const Admin = (props) => {
           {getRoutes(routes)}
           <Redirect from="*" to="/admin/index" />
         </Switch>
-        <Container fluid>
+        {/* <Container fluid>
           <AdminFooter />
-        </Container>
+        </Container> */}
       </div>
     </>
   );

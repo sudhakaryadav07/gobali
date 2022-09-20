@@ -86,6 +86,7 @@ const ChangePassword = () => {
                   setPassword={() => setRePasswordType(!isIncrypted)} />
                 <Button
                   label="UPDATE PASSWORD"
+                  color="primary"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
             </CardBody>

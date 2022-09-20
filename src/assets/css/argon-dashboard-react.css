@@ -7756,6 +7756,10 @@ button.bg-darker:focus {
 }
 
 @media (min-width: 576px) {
+  .display-content {
+    display: contents;
+  }
+
   .d-sm-none {
     display: none !important;
   }

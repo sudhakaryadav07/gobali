@@ -37,10 +37,9 @@ import {
 const AdminNavbar = (props) => {
   return (
     <>
-      <Navbar className="navbar-top " expand="md" id="navbar-main">
-        <Container fluid>
-          {props.brandText}
-          <Nav className="align-items-center d-none d-md-flex" navbar>
+      <Navbar className="navbar-top " expand="md" id="navbar-main" color="primary">
+        <Container fluid className="justify-content-end">
+          <Nav className="align-items-end d-none d-md-flex" navbar>
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
@@ -50,11 +49,9 @@ const AdminNavbar = (props) => {
                       src={require("../../assets/img/theme/team-4-800x800.jpg")}
                     />
                   </span>
-                  <Media className="ml-2 d-none d-lg-block">
-                    <span className="mb-0 text-sm font-weight-bold">
-                      Jessica Jones
-                    </span>
-                  </Media>
+                  <span className="mb-0 text-sm font-weight-bold">
+                    Jessica Jones
+                  </span>
                 </Media>
               </DropdownToggle>
               <DropdownMenu className="dropdown-menu-arrow" right>
