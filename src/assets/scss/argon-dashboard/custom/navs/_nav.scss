@@ -10,7 +10,7 @@
     padding: 1rem 0;
     @include border-top-radius($card-border-radius);
 
-    + .card {
+    +.card {
         @include border-top-radius(0);
         @include border-bottom-radius($card-border-radius);
     }
@@ -32,11 +32,15 @@
     }
 }
 
-@media (min-width: 992px){
-  .nav-item.active-pro {
-      position: absolute;
-      width: 100%;
-      bottom: 10px;
-      background:  $table-head-bg;
-  }
+@media (min-width: 992px) {
+    .nav-item.active-pro {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        background: $table-head-bg;
+    }
+}
+
+.nav-label {
+    color: $white;
 }

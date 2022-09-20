@@ -1,52 +1,23 @@
-/*!
 
-=========================================================
-* Argon Dashboard React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
-// nodejs library to set properties for components
 import { PropTypes } from "prop-types";
-
-// reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
   Collapse,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
   DropdownToggle,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
   InputGroupText,
   InputGroup,
   Media,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
-  Progress,
-  Table,
   Container,
   Row,
   Col
@@ -118,11 +89,11 @@ const Sidebar = (props) => {
         </button>
         {/* Brand */}
         {logo ? (
-          <NavbarBrand className="pt-0" {...navbarBrandProps}>
-            <img alt=""
-              style={{ fontSize: "50px" }}
-              src={require("../../assets/img/icons/usermanagement/tata-power-icon.png")} />
-          </NavbarBrand>
+          // <NavbarBrand className="pt-0" {...navbarBrandProps}>
+          <img alt=""
+            style={{ fontSize: "30px" }}
+            src={require("../../assets/img/icons/usermanagement/tata-power-icon.png")} />
+          // </NavbarBrand>
         ) : null}
         {/* User */}
         <Nav className="align-items-center d-md-none">

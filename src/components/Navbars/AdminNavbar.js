@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+import Button from "components/common/button";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -39,6 +40,7 @@ const AdminNavbar = (props) => {
     <>
       <Navbar className="navbar-top " expand="md" id="navbar-main" color="primary">
         <Container fluid className="justify-content-end">
+          <Button label="+ New Project" className="nav-mt" />
           <Nav className="align-items-end d-none d-md-flex" navbar>
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
@@ -49,7 +51,7 @@ const AdminNavbar = (props) => {
                       src={require("../../assets/img/theme/team-4-800x800.jpg")}
                     />
                   </span>
-                  <span className="mb-0 text-sm font-weight-bold">
+                  <span className="mb-0 ml-3 text-sm font-weight-bold nav-label" >
                     Jessica Jones
                   </span>
                 </Media>

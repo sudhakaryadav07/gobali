@@ -1,7 +1,6 @@
 import React from 'react';
 import { Input } from 'reactstrap';
 
-
 const SelectField = ({ placeholder, className, error, size, required, disabled, value, options, onChange }) => {
    try {
       let optionArr = [{ key: 0, name: "Select", value: "" }].concat(options);

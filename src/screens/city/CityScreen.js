@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { Card, FormGroup, CardBody, InputGroupAddon, InputGroup, Label, Col, CardHeader, Container, Row } from "reactstrap";
+import { Card, FormGroup, CardBody, InputGroupAddon, InputGroup, InputGroupText, Label, Col, CardHeader, Container, Row } from "reactstrap";
 import UserHeader from "../../components/Headers/UserHeader";
 import CityView from './components/CityView';
 // import CityForm from './components//CityForm';
@@ -15,6 +15,7 @@ import { uploadFile } from "../../utils/common/UploadUtil";
 import ScrollWrapper from "components/common/ScrollWrapper";
 import SelectField from "components/common/SelectField";
 import { FLAG, DATA } from "config/constants";
+import { Pagination } from "components/pagination";
 
 
 let DISTRICT_ADMIN = "ABC"
@@ -143,12 +144,12 @@ const CityScreen = () => {
   return (
     <>
       <UserHeader />
-      <Container className="p-0 display-content" color="secondary">
-        <Row sm="12" md="12" lg="12" className="m-0">
+      <Container className="p-0 display-content secondary">
+        <Row sm="12" md="12" lg="12" className="mt-5 mr-3 ml-3 mb-5">
           <Col sm="12" md="12" lg="12">
             <Row className="ml-1"><h2 className="label-color">User Management</h2></Row>
-            <Row className="justify-content-between">
-              <Col sm="12" md="12" lg="3">
+            <Row >
+              <Col sm="12" md="12" lg="2" >
                 <InputBox
                   value={search}
                   size="medium"
@@ -158,14 +159,13 @@ const CityScreen = () => {
                   onChange={(e) => setSearch(e.target.value)}
                 />
               </Col>
-              <Col sm="12" md="12" lg="2">
+              <Col sm="12" md="12" lg="2" >
                 <FormGroup className="mb-3">
                   <SelectField
                     value="activeflag"
                     className="mt-11"
                     size="medium"
                     placeholder="Search Name..."
-                    // disabled={fmode === "view" ? true : false}
                     options={FLAG}
                   />
                 </FormGroup>
@@ -175,43 +175,62 @@ const CityScreen = () => {
                   <SelectField
                     value="activeflag"
                     size="medium"
-                    className="mt-18"
+                    className="mt-11"
                     placeholder="Status"
-                    // disabled={fmode === "view" ? true : false}
                     options={FLAG}
                   />
                 </FormGroup>
               </Col>
-              <Col sm="12" md="12" lg="2">
+              <Col sm="12" md="12" lg="3" />
+              <Col sm="12" md="12" lg="1">
                 <Button
                   color="primary"
-                  className="mt-10"
-                  label="Reset"
-                // onClick={() => handleSetFilter()}
+                  className="mt-4"
+                  label="Export"
                 />
               </Col>
               <Col sm="12" md="12" lg="2">
                 <Button
-                  color="orange"
+                  color="warning"
                   disabled={false}
                   label="+ New User"
-                // onSubmit={() => handleForm('create', '')}
+                  className="my-4.full-width mt-4"
                 />
               </Col>
             </Row>
-            <Row className="justify-content-between display-content m-0" style={{ minHeight: 300 }} sm="12" md="12" lg="12">
-              <ScrollWrapper onScroll={() => { }}>
-                <CityView
-                  loading={loading}
-                  data={DATA}
-                // authAccess={`${userRole}`.includes(DISTRICT_ADMIN)}
-                // handleForm={handleForm}
-                />
-              </ScrollWrapper>
-            </Row>
+            <div style={{ border: "1px solid #1261A9", borderRadius: 5, borderTop: 0 }}>
+              <Row className="justify-content-between display-content m-0" style={{ height: 764 }} sm="12" md="12" lg="12">
+                <ScrollWrapper onScroll={() => { }}>
+                  <CityView
+                    loading={loading}
+                    data={DATA}
+                  />
+                </ScrollWrapper>
+              </Row>
+              <Row className="justify-content-between mt-5 mb-5 mr-2 ml-2">
+                <Col sm="12" md="12" lg="2" >
+                  <Pagination className="mt-2" />
+                </Col>
+                <Col sm="12" md="12" lg="3" >
+                  <Row sm="12" md="12" lg="12" className="justify-content-end">
+                    <Col sm="12" md="12" lg="12" className="d-flex justify-content-end">
+                      <Label className="mt-2 mr-3">Show: </Label>
+                      <FormGroup className="mb-3">
+                        <SelectField
+                          value="activeflag"
+                          size="medium"
+                          placeholder="Status"
+                          options={FLAG}
+                        />
+                      </FormGroup>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </div>
           </Col>
-          {/* <Col sm="12" md="12" lg="12" className="text-center p-0 m-0">Record Count : {cityList.length}</Col> */}
         </Row>
+
         {/* {cityForm ?
           <CityForm
             mode={mode}

@@ -6,6 +6,9 @@
 // General styles
 
 .table {
+    // border: 1px solid $primary;
+    border-radius: 3px;
+
     thead th {
         padding-top: $table-head-spacer-y;
         padding-bottom: $table-head-spacer-y;

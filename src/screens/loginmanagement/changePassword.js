@@ -87,6 +87,7 @@ const ChangePassword = () => {
                 <Button
                   label="UPDATE PASSWORD"
                   color="primary"
+                  className="my-4 full-width"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
             </CardBody>

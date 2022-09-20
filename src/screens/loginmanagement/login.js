@@ -114,6 +114,7 @@ const Login = () => {
                 <Button
                   label="LOG IN"
                   color="primary"
+                  className="my-4 full-width"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
               <Row>

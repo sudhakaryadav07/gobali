@@ -72,7 +72,7 @@ $colors: map-merge(("blue": $blue,
 
 $default: #172b4d !default;
 $primary: #1261A9 !default;
-$secondary: #E5E5E5 !default;
+$secondary: #f1f7ff !default;
 $success: $green  !default;
 $info: $teal  !default;
 $warning: $orange  !default;
@@ -1001,4 +1001,8 @@ $footer-heading-font-size: $font-size-sm  !default;
 
 .error-label {
   color: $danger;
+}
+
+.secondary {
+  background-color: $secondary;
 }

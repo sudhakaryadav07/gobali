@@ -1,4 +1,4 @@
-import { FormGroup, Label as ErrorLabel, Input, Label } from "reactstrap";
+import { FormGroup, Label as ErrorLabel, InputGroupText, Input, Label } from "reactstrap";
 
 const InputBox = ({ label, size, placeholder, invalid, errormsg, type, value, setInput }) => {
     return (
@@ -13,6 +13,9 @@ const InputBox = ({ label, size, placeholder, invalid, errormsg, type, value, se
                 onChange={(e) => setInput(e.target.value)}
             />
             {errormsg ? <ErrorLabel className="error-label">{errormsg}</ErrorLabel> : ""}
+            {/* <InputGroupText>
+                $
+            </InputGroupText> */}
         </FormGroup>
     )
 }

@@ -11,14 +11,14 @@ var routes = [
   {
     path: "/tables",
     name: "User Management",
-    icon: "ni ni-bullet-list-67 white",
+    icon: "fa fa-users white",
     component: CityScreen,
     layout: "/admin"
   },
   {
     path: "/tables",
     name: "Ptoject Management",
-    icon: "ni ni-bullet-list-67 white",
+    icon: "fa fa-sticky-note white",
     component: CityScreen,
     layout: "/admin"
   }
