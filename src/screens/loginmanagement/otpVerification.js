@@ -10,7 +10,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import { Button } from "../../components/Common/Button.js";
+import Button from "../../components/Common/Button";
 
 const OtpVerification = () => {
 

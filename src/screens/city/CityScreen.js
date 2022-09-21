@@ -8,14 +8,14 @@ import CityView from './components/CityView';
 
 // import { fetchAllCity, createCity, updateCity } from '../../store/city/cityActions';
 // import { InputField, ScrollWrapper, Button, Loader } from './components/';
-import { Button } from '../../components/Common/Button.js';
+import Button from '../../components/Common/Button.js';
 import InputBox from '../../components/Common/Inputbox.js';
 
 import { uploadFile } from "../../utils/common/UploadUtil";
-import { ScrollWrapper } from "../../components/Common/ScrollWrapper.js";
-import { SelectField } from "../../components/Common/SelectField.js";
+import ScrollWrapper from "../../components/Common/ScrollWrapper";
+import SelectField from "../../components/Common/SelectField";
 import { FLAG, DATA } from "config/constants";
-import { Pagination } from "../../components/Common/Pagination";
+import Pagination from "../../components/Common/Pagination";
 
 
 let DISTRICT_ADMIN = "ABC"

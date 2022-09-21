@@ -1,4 +1,4 @@
-import { Button } from "../../components/Common/Button.js";
+import Button from "../../components/Common/Button";
 import { useHistory } from "react-router-dom";
 import {
   Card,
@@ -25,7 +25,7 @@ const SuccessfullyUpdatePassword = () => {
 
                 <Row className="m-0 justify-content-center">
                   <Col xs="12 p-0 text-center">
-                    <i class="fa fa-check-circle-o" style={{ fontSize: 100, color: "#1261A9" }} aria-hidden="true"></i>
+                    <i className="fa fa-check-circle-o" style={{ fontSize: 100, color: "#1261A9" }} aria-hidden="true"></i>
 
                   </Col>
                   <Col xs="12 p-0 text-center">

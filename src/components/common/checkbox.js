@@ -1,4 +1,4 @@
-export const Checkbox = ({ label }) => {
+const Checkbox = ({ label }) => {
     try {
         return (
             <div className="custom-control custom-control-alternative custom-checkbox">
@@ -17,3 +17,5 @@ export const Checkbox = ({ label }) => {
 
     }
 }
+
+export default Checkbox;

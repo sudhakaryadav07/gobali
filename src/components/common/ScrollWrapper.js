@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-export const ScrollWrapper = ({ status, onScroll, children }) => {
+const ScrollWrapper = ({ status, onScroll, children }) => {
 
     const listInnerBodyRef = useRef();
 

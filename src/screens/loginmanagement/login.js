@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Alert } from "../../components/Common/Alert.js";
+import Alert from "../../components/Common/Alert";
 import {
   Card,
   CardHeader,
@@ -15,10 +15,10 @@ import {
   InputGroup
 } from "reactstrap";
 import { loginValidation } from '../../utils/helper';
-import InputBox from "../../components/Common/Inputbox.js";
-import PasswordBox from "../../components/Common/Passwordbox.js";
-import { Button } from "../../components/Common/Button.js";
-import { Checkbox } from "../../components/Common/Checkbox.js";
+import InputBox from "../../components/Common/Inputbox";
+import PasswordBox from "../../components/Common/Passwordbox";
+import Button from "../../components/Common/Button";
+import Checkbox from "../../components/Common/Checkbox";
 
 const Login = () => {
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Alert } from "../../components/Common/Alert.js";
+import Alert from "../../components/Common/index";
 import {
   Card,
   CardHeader,

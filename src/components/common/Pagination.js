@@ -1,6 +1,6 @@
 import { Pagination as CPagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-export const Pagination = ({ className }) => {
+const Pagination = ({ className }) => {
     try {
         return (
             <CPagination className={className}>
@@ -59,3 +59,5 @@ export const Pagination = ({ className }) => {
 
     }
 }
+
+export default Pagination;

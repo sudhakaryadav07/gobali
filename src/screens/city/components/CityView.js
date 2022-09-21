@@ -1,8 +1,6 @@
-import { Checkbox } from '../../../components/Common/Checkbox.js';
+import Checkbox from '../../../components/Common/Checkbox';
 import React from 'react'
 import { Media, Table, Label as DisplayLabel } from "reactstrap";
-// import { Button, DisplayLabel } from '../../../components/common/index';
-// import moment from 'moment';
 
 const CityView = ({ loading, authAccess, data, handleForm }) => {
     try {
@@ -18,7 +16,7 @@ const CityView = ({ loading, authAccess, data, handleForm }) => {
                                 <th scope="col" className="col-2">Location</th>
                                 <th scope="col" className="col-2">Joined</th>
                                 <th scope="col" className="col-2" style={{ color: 'orange' }}>Permissions</th>
-                                <th scope="col" className="col-1"><i class="fa fa-calendar" aria-hidden="true"></i></th>
+                                <th scope="col" className="col-1"><i className="fa fa-calendar" aria-hidden="true"></i></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,7 +26,7 @@ const CityView = ({ loading, authAccess, data, handleForm }) => {
                                         <td className="col-1"><Checkbox /></td>
                                         <td className="col-2">
                                             <Media className="align-items-center">
-                                                <i class="fa fa-user-circle" style={{ fontSize: 40, marginRight: 10 }} aria-hidden="true"></i>
+                                                <i className="fa fa-user-circle" style={{ fontSize: 40, marginRight: 10 }} aria-hidden="true"></i>
                                                 <Media>
                                                     <span className="mb-0 text-sm">
                                                         {data.name}
