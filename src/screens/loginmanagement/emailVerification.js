@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Alert } from "../../components/Common/Alert.js";
+import MessageHandler from "../../components/Alerts/alert";
 import {
   Card,
   CardHeader,
@@ -11,8 +11,8 @@ import {
   Col,
 } from "reactstrap";
 import { emailValidation } from '../../utils/helper';
-import InputBox from "../../components/Common/Inputbox";
-import Button from "../../components/Common/Button";
+import InputBox from "../../components/TextInputs/inputbox";
+import Button from "../../components/Buttons/button";
 
 const EmailVerification = () => {
 
@@ -44,7 +44,7 @@ const EmailVerification = () => {
     <Container className="pt-lg-7">
       <Row className="justify-content-center">
         <Col lg="7">
-          {emailSent ? <Alert status="success" msg="Email sent to you !" /> : ""}
+          {emailSent ? <MessageHandler status="success" msg="Email sent to you !" /> : ""}
           <Card className="bg-secondary shadow border-0">
             <CardHeader className="px-lg-5 py-lg-5 bg-white text-left">
               <p className="m-0 p-0 pb-2 label-color text-25">Forgot Password</p>
@@ -61,8 +61,6 @@ const EmailVerification = () => {
                   setInput={(value) => setEmail(value)} />
                 <Button
                   label="CONTINUE"
-                  color="primary"
-                  className="my-4 full-width"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
             </CardBody>
