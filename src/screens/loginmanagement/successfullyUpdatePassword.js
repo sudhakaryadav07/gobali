@@ -37,6 +37,8 @@ const SuccessfullyUpdatePassword = () => {
                 </Row>
                 <Button
                   label="CONTINUE"
+                  color="primary"
+                  className="my-4 full-width"
                   onSubmit={() => history.push("/")} />
               </Form>
             </CardBody>

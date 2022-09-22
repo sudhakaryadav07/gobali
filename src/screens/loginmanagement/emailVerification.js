@@ -61,6 +61,8 @@ const EmailVerification = () => {
                   setInput={(value) => setEmail(value)} />
                 <Button
                   label="CONTINUE"
+                  color="primary"
+                  className="my-4 full-width"
                   onSubmit={() => handleOnSubmit()} />
               </Form>
             </CardBody>

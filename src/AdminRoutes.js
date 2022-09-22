@@ -1,25 +1,27 @@
-import CityScreen from "./screens/city/CityScreen.js";
+import LoginScreen from "screens/loginmanagement/login.js";
+import UserManagementScreen from "./screens/user/UserManagementScreen";
+import ProjectManagementScreen from "./screens/project/ProjectManagementScreen";
 
 var routes = [
   {
-    path: "/tables",
+    path: "/login",
     name: "Dashboard",
-    icon: "ni ni-bullet-list-67 white",
-    component: CityScreen,
-    layout: "/admin"
+    icon: "fa fa-users white",
+    component: LoginScreen,
+    layout: "/auth"
   },
   {
-    path: "/tables",
+    path: "/users",
     name: "User Management",
     icon: "fa fa-users white",
-    component: CityScreen,
+    component: UserManagementScreen,
     layout: "/admin"
   },
   {
-    path: "/tables",
+    path: "/projects",
     name: "Ptoject Management",
     icon: "fa fa-sticky-note white",
-    component: CityScreen,
+    component: ProjectManagementScreen,
     layout: "/admin"
   }
 ];

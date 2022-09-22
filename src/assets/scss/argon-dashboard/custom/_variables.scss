@@ -72,7 +72,7 @@ $colors: map-merge(("blue": $blue,
 
 $default: #172b4d !default;
 $primary: #1261A9 !default;
-$secondary: #f1f7ff !default;
+$secondary: #f1f7fe !default;
 $success: $green  !default;
 $info: $teal  !default;
 $warning: $orange  !default;
@@ -1005,4 +1005,40 @@ $footer-heading-font-size: $font-size-sm  !default;
 
 .secondary {
   background-color: $secondary;
+}
+
+.title-color {
+  color: $black;
+}
+
+.h3-color {
+  color: $gray-500;
+}
+
+.category1 {
+  color: $danger  !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #FFECD7 !important;
+}
+
+.category2 {
+  color: $green  !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #BFF1DF !important;
+}
+
+.category3 {
+  color: #3798BE !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #64CBF4 !important;
+}
+
+.category4 {
+  color: #545DAD !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #EEEFF7 !important;
 }
