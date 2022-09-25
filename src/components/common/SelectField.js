@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'reactstrap';
 
-const SelectField = ({ placeholder, className, error, size, required, disabled, value, options, onChange }) => {
+const SelectField = ({ placeholder, className, style, error, size, required, disabled, value, options, onChange }) => {
    try {
       return (
          <Input
@@ -14,6 +14,7 @@ const SelectField = ({ placeholder, className, error, size, required, disabled, 
             disabled={disabled}
             required={required}
             size={size}
+            style={style}
             onChange={(evt) => onChange(evt.target.value)}
             onKeyDown={(evt) => onChange(evt.target.value)}
             isInvalid={error}

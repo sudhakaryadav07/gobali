@@ -126,4 +126,10 @@
 
 .table td {
     border-top: 0 !important;
+    padding: 9px;
+}
+
+.table-responsive {
+    display: block;
+    height: 500px
 }

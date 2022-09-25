@@ -3,24 +3,17 @@ import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { FormGroup, Label, Col, Container, Row } from "reactstrap";
 import UserHeader from "../../components/Headers/UserHeader";
-import CityView from './components/CityView';
-// import CityForm from './components//CityForm';
-
-// import { fetchAllCity, createCity, updateCity } from '../../store/city/cityActions';
-// import { InputField, ScrollWrapper, Button, Loader } from './components/';
+import UserManagementView from './UserManagementView';
 import Button from '../../components/Common/Button.js';
 import InputBox from '../../components/Common/Inputbox.js';
-
-import { uploadFile } from "../../utils/common/UploadUtil";
 import ScrollWrapper from "../../components/Common/ScrollWrapper";
 import SelectField from "../../components/Common/SelectField";
-import { FLAG, DATA } from "config/constants";
+import { ROWCOUNT, DATA } from "config/constants";
 import Pagination from "../../components/Common/Pagination";
+import { PERMISSION } from "config/constants";
+import { JOINED } from "config/constants";
 
-
-let DISTRICT_ADMIN = "ABC"
-
-const CityScreen = () => {
+const UserManagementScreen = () => {
   const dispatch = useDispatch();
 
   // const { userRole, userSavedSearch } = useSelector((state) => state.userLogin);
@@ -28,9 +21,10 @@ const CityScreen = () => {
   // const { loading: loadingCreate, error: errorCreate } = useSelector((state) => state.cityCreate);
   // const { loading: loadingUpdate, error: errorUpdate } = useSelector((state) => state.cityUpdate);
 
-  const [cityList, setCityList] = useState([]);
-  const [cityObj, setCityObj] = useState();
-  const [cityForm, setShowForm] = useState(false);
+  const [rowCount, setRowCount] = useState();
+  const [permission, setPermission] = useState();
+  const [joined, setJoined] = useState();
+  const [users, setUsers] = useState(DATA);
 
   const [mode, setMode] = useState("create");
   const [search, setSearch] = useState("");
@@ -66,21 +60,16 @@ const CityScreen = () => {
   //   }
   // }, [dispatch, loadingCreate, loadingUpdate]);
 
-  // const handleSearch = async () => {
-  //   try {
-  //     if (!search) return;
-  //     setLoader(true);
-
-  //     let filterdCities = await cities.filter(item => item.name.toLowerCase().indexOf(search.toLowerCase()) >= 0);
-  //     setCityList(filterdCities);
-  //     if (filterdCities.length > 0) {
-  //       // await createSaveSearch({ ...userSavedSearch, keyword: search, module: "City" });
-  //     }
-  //     setLoader(false);
-  //   } catch (e) {
-
-  //   }
-  // }
+  const handleSearch = async (search) => {
+    try {
+      if (!search) setUsers(DATA);
+      setSearch(search);
+      let filteredUsers = await DATA.filter(item => item.name.toLowerCase().indexOf(search.toLowerCase()) >= 0);
+      setUsers(filteredUsers);
+    } catch (e) {
+      console.log("handleUserSearch-->".e)
+    }
+  }
 
   // const handleForm = (mode, data) => {
   //   try {
@@ -156,26 +145,28 @@ const CityScreen = () => {
                   name="search"
                   type="text"
                   placeholder="Search Name..."
-                  onChange={(e) => setSearch(e.target.value)}
+                  onChange={handleSearch}
                 />
               </Col>
               <Col sm="12" md="12" lg="2" >
                 <FormGroup className="mb-3">
                   <SelectField
-                    value="activeflag"
                     className="mt-11"
                     size="medium"
-                    options={[{ key: 0, name: "Permission", value: "" }].concat(FLAG)}
+                    options={PERMISSION}
+                    value={permission}
+                    onChange={setPermission}
                   />
                 </FormGroup>
               </Col>
               <Col sm="12" md="12" lg="2">
                 <FormGroup className="mb-3">
                   <SelectField
-                    value="activeflag"
                     size="medium"
                     className="mt-11"
-                    options={[{ key: 0, name: "Joined", value: "" }].concat(FLAG)}
+                    value={joined}
+                    options={JOINED}
+                    onChange={setJoined}
                   />
                 </FormGroup>
               </Col>
@@ -197,9 +188,10 @@ const CityScreen = () => {
             <div style={{ border: "1px solid #1261A9", borderRadius: 5, borderTop: 0 }}>
               <Row className="justify-content-between display-content m-0" style={{ height: 764 }} sm="12" md="12" lg="12">
                 <ScrollWrapper onScroll={() => { }}>
-                  <CityView
+                  <UserManagementView
                     loading={loading}
-                    data={DATA}
+                    data={users}
+                    rowCount={rowCount}
                   />
                 </ScrollWrapper>
               </Row>
@@ -211,12 +203,13 @@ const CityScreen = () => {
                   <Row sm="12" md="12" lg="12" className="justify-content-end">
                     <Col sm="12" md="12" lg="12" className="d-flex justify-content-end">
                       <Label className="mt-2 mr-3">Show: </Label>
-                      <FormGroup className="mb-3">
+                      <FormGroup className="mb-3" style={{ width: "100%" }}>
                         <SelectField
-                          value="activeflag"
                           size="medium"
+                          value={rowCount}
                           placeholder="Status"
-                          options={FLAG}
+                          options={ROWCOUNT}
+                          onChange={setRowCount}
                         />
                       </FormGroup>
                     </Col>
@@ -242,4 +235,4 @@ const CityScreen = () => {
   );
 };
 
-export default CityScreen;
+export default UserManagementScreen;

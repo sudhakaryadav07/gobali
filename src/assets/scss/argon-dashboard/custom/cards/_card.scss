@@ -16,3 +16,18 @@
     background-color: #fff;
     padding: 0;
 }
+
+.card-mt {
+    margin-bottom: 0px !important;
+    background-color: transparent;
+    color: $black;
+    border: 1px solid $black;
+}
+
+.card-mt:hover {
+    margin-bottom: 0px !important;
+    background-color: transparent;
+    color: $black;
+    border: 1px solid $black;
+    transition: none;
+}

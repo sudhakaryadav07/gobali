@@ -1,8 +1,9 @@
-import Checkbox from '../../../components/Common/Checkbox';
+import Checkbox from '../../components/Common/Checkbox';
 import React from 'react'
 import { Media, Table, Label as DisplayLabel } from "reactstrap";
+import Button from 'components/Common/Button';
 
-const CityView = ({ loading, authAccess, data, handleForm }) => {
+const UserManagementView = ({ loading, rowCount, data, handleForm }) => {
     try {
         return (
             <>
@@ -37,7 +38,7 @@ const CityView = ({ loading, authAccess, data, handleForm }) => {
                                         <td className="col-2">{data.email}</td>
                                         <td className="col-2">{data.location}</td>
                                         <td className="col-2">{data.joined}</td>
-                                        <td className="col-2">{data.permission}</td>
+                                        <td className="col-2 d-flex"> <Button label={data.permission} /></td>
                                         <td className="col-1">
                                             ...
                                         </td>
@@ -58,4 +59,4 @@ const CityView = ({ loading, authAccess, data, handleForm }) => {
 
 }
 
-export default CityView;
+export default UserManagementView;

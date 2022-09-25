@@ -1,8 +1,8 @@
-import Login from "screens/loginmanagement/login";
-import EmailVerification from "screens/loginmanagement/emailVerification";
-import ChangePassword from "screens/loginmanagement/changePassword";
-import OtpVerification from "screens/loginmanagement/otpVerification";
-import SuccessfullyUpdatePassword from "screens/loginmanagement/successfullyUpdatePassword";
+import Login from "screens/LoginManagement/LoginScreen";
+import EmailVerification from "screens/LoginManagement/EmailVerificationScreen";
+import ChangePassword from "screens/LoginManagement/ChangePasswordScreen";
+import OtpVerification from "screens/LoginManagement/OtpVerificationScreen";
+import SuccessfullyUpdatePassword from "screens/LoginManagement/SuccessfullyUpdatePasswordScreen";
 
 var routes = [
   {

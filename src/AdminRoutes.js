@@ -1,6 +1,6 @@
-import LoginScreen from "screens/loginmanagement/login.js";
-import UserManagementScreen from "./screens/user/UserManagementScreen";
-import ProjectManagementScreen from "./screens/project/ProjectManagementScreen";
+import LoginScreen from "screens/LoginManagement/LoginScreen";
+import UserManagementScreen from "./screens/UserManagement/UserManagementScreen";
+import ProjectManagementScreen from "./screens/ProjectManagement/ProjectManagementScreen";
 
 var routes = [
   {
