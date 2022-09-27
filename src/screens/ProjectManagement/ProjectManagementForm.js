@@ -105,7 +105,7 @@ const ProjectManagementForm = ({ isOpen, className, handleModal }) => {
                 </Row>
                 <Row>
                     <Col sm="12" md="12" lg="12" className='d-flex justify-content-start'>
-                        <Label className='text-sm'>Assign Project Manager(Multiple choice if any)</Label>
+                        <Label className='text-sm'>Assign Project Manager(Multiple Choice if any)</Label>
                     </Col>
                     <Col sm="12" md="12" lg="6" className='ml--4'>
                         <Checkbox label="Pratik Patil" />
