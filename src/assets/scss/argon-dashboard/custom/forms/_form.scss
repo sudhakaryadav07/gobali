@@ -78,3 +78,9 @@ textarea[resize="horizontal"] {
 .form-control-lg {
     font-size: $font-size-base;
 }
+
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 3.25rem;
+}

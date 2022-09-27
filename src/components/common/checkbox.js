@@ -1,17 +1,15 @@
-const Checkbox = ({ label }) => {
+import { FormGroup, Label, Input } from 'reactstrap';
+
+const Checkbox = ({ label, className }) => {
     try {
         return (
-            <div className="custom-control custom-control-alternative custom-checkbox">
-                <input
-                    className="custom-control-input"
-                    id=" customCheckLogin"
-                    type="checkbox" />
-                <label
-                    className="custom-control-label"
-                    htmlFor=" customCheckLogin">
-                    <span>{label}</span>
-                </label>
-            </div>
+            <FormGroup className={className} check>
+                <Input type="checkbox" />
+                {' '}
+                <Label check className='text-xs'>
+                    {label}
+                </Label>
+            </FormGroup>
         )
     } catch (e) {
 

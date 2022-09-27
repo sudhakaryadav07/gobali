@@ -1,19 +1,18 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, applyMiddleware } from 'redux';
+
 import thunk from 'redux-thunk';
 
 import {
-   cityListReducer,
-   cityCreateReducer,
-   cityUpdateReducer
-} from './city/cityReducers';
+   userListReducer,
+   userCreateReducer,
+   userUpdateReducer
+} from './user/UserReducers';
 
 const reducer = combineReducers({
-
-   cityList: cityListReducer,
-   cityCreate: cityCreateReducer,
-   cityUpdate: cityUpdateReducer,
-
-
+   userList: userListReducer,
+   userCreate: userCreateReducer,
+   userUpdate: userUpdateReducer,
 });
 
 const userProfile = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : null;
@@ -28,10 +27,10 @@ const initialState = {
 
 const middleware = [thunk];
 
-const store = createStore(
-   reducer,
-   initialState,
-   applyMiddleware(...middleware)
-);
+const store = configureStore({
+   reducer: reducer,
+   initialState: initialState,
+   applyMiddleware: applyMiddleware(...middleware)
+});
 
 export default store;

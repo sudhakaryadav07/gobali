@@ -136,7 +136,7 @@ const UserManagementScreen = () => {
       <Container className="p-0 display-content secondary">
         <Row sm="12" md="12" lg="12" className="mt-4 mr-3 ml-3 mb-5">
           <Col sm="12" md="12" lg="12">
-            <Row className="ml-1"><h2 className="label-color">User Management</h2></Row>
+            <Row className="ml-1"><h2 className="label-color mb-0">User Management</h2></Row>
             <Row >
               <Col sm="12" md="12" lg="2" >
                 <InputBox
@@ -186,7 +186,7 @@ const UserManagementScreen = () => {
               </Col>
             </Row>
             <div style={{ border: "1px solid #1261A9", borderRadius: 5, borderTop: 0 }}>
-              <Row className="justify-content-between display-content m-0" style={{ height: 764 }} sm="12" md="12" lg="12">
+              <Row className="justify-content-between display-content m-0" sm="12" md="12" lg="12">
                 <ScrollWrapper onScroll={() => { }}>
                   <UserManagementView
                     loading={loading}
@@ -196,7 +196,7 @@ const UserManagementScreen = () => {
                 </ScrollWrapper>
               </Row>
               <Row className="justify-content-between mt-5 mb-5 mr-2 ml-2">
-                <Col sm="12" md="12" lg="2" >
+                <Col sm="12" md="12" lg="4" >
                   <Pagination className="mt-2" />
                 </Col>
                 <Col sm="12" md="12" lg="3" >

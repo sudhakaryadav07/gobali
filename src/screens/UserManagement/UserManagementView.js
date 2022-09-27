@@ -11,7 +11,7 @@ const UserManagementView = ({ loading, rowCount, data, handleForm }) => {
                     <Table className="align-items-center table-flush" responsive>
                         <thead className="thead-light">
                             <tr>
-                                <th scope="col" className="col-1"><Checkbox /> </th>
+                                <th scope="col" className="col-1"><Checkbox className="pl-28" /> </th>
                                 <th scope="col" className="col-2">Full Name</th>
                                 <th scope="col" className="col-2">Email Address</th>
                                 <th scope="col" className="col-2">Location</th>
@@ -24,10 +24,10 @@ const UserManagementView = ({ loading, rowCount, data, handleForm }) => {
                             {data.map((data, i) => {
                                 return (
                                     <tr key={i}>
-                                        <td className="col-1"><Checkbox /></td>
-                                        <td className="col-2">
+                                        <td className="col-1 pt-2 pb-2"><Checkbox /></td>
+                                        <td className="col-2 pt-2 pb-2">
                                             <Media className="align-items-center">
-                                                <i className="fa fa-user-circle" style={{ fontSize: 40, marginRight: 10 }} aria-hidden="true"></i>
+                                                <i className="fa fa-user-circle" style={{ fontSize: 37, marginRight: 10 }} aria-hidden="true"></i>
                                                 <Media>
                                                     <span className="mb-0 text-sm">
                                                         {data.name}
@@ -35,11 +35,11 @@ const UserManagementView = ({ loading, rowCount, data, handleForm }) => {
                                                 </Media>
                                             </Media>
                                         </td>
-                                        <td className="col-2">{data.email}</td>
-                                        <td className="col-2">{data.location}</td>
-                                        <td className="col-2">{data.joined}</td>
-                                        <td className="col-2 d-flex"> <Button label={data.permission} /></td>
-                                        <td className="col-1">
+                                        <td className="col-2 pt-2 pb-2">{data.email}</td>
+                                        <td className="col-2 pt-2 pb-2">{data.location}</td>
+                                        <td className="col-2 pt-2 pb-2">{data.joined}</td>
+                                        <td className="col-2 pt-2 pb-2 d-flex"> <Button label={data.permission} /></td>
+                                        <td className="col-1 pt-2 pb-2">
                                             ...
                                         </td>
                                     </tr>);

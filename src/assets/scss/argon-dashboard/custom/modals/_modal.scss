@@ -26,7 +26,44 @@ $value in $theme-colors {
     }
 }
 
+.modal-backdrop.show {
+    opacity: 0.8;
+}
 
 .display-content {
     display: contents;
+}
+
+.modal-title {
+    font-size: $h4-font-size;
+    line-height: $line-height-base;
+    font-weight: $font-weight-ex-normal;
+}
+
+.modal-dialog {
+    max-width: 550px;
+    margin: 8.75rem auto;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    border-bottom: 0 solid #e9ecef;
+    border-top-left-radius: 0.4375rem;
+    border-top-right-radius: 0.4375rem;
+    font-size: 2rem;
+    background-color: $gray-600;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    border-top: 0 solid #e9ecef;
+    border-bottom-right-radius: 0.4375rem;
+    border-bottom-left-radius: 0.4375rem;
 }

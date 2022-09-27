@@ -8,10 +8,7 @@ const ProjectManagementView = () => {
         <>
             <Container className="p-0 display-content secondary">
 
-                <Row sm="12" md="12" lg="12" className="mt-4 mr-3 ml-3 mb-5 d-flex justify-content-end pr-14">
-                    <Button color="primary" label="+" className="pr-14" />
-                    <i class="fa fa-plus-square-o" style={{ fontSize: 40 }} aria-hidden="true"></i>
-                </Row>
+
 
                 <Row sm="12" md="12" lg="3" className="mt-4 mr-3 ml-3 mb-5">
                     <Col sm="12" md="12" lg="4" className="mb-4">

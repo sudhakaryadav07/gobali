@@ -1,13 +1,13 @@
 import { Button as ButtonComponent } from "reactstrap";
 
-const Button = ({ label, outline, className, color, onSubmit }) => {
+const Button = ({ label, className, color, onClick }) => {
     return (
         <div className="text-center">
             <ButtonComponent
                 color={color}
                 type="button"
                 className={className}
-                onClick={() => onSubmit()}>
+                onClick={(e) => onClick(e.target.value)}>
                 {label}</ButtonComponent>
         </div>
     )
