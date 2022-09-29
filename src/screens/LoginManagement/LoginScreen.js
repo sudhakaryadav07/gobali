@@ -78,7 +78,7 @@ const LoginScreen = () => {
                     value={username}
                     invalid={errors ? errors.username.status : false}
                     errormsg={errors ? errors.username.message : false}
-                    setInput={(value) => setUsername(value)} />
+                    onChange={setUsername} />
                   <PasswordBox
                     label="Password"
                     type={isIncrypted ? "password" : "text"}
@@ -86,7 +86,7 @@ const LoginScreen = () => {
                     showPassword={isIncrypted}
                     invalid={errors ? errors.password.status : false}
                     errormsg={errors ? errors.password.message : false}
-                    setInput={(value) => setPassword(value)}
+                    onChange={setPassword}
                     setPassword={() => setPasswordType(!isIncrypted)} />
                   <Row className="m-0 justify-content-between">
                     <Col xs="8 p-0">
@@ -95,7 +95,7 @@ const LoginScreen = () => {
                         type="text"
                         value={securityText}
                         invalid={errors ? errors.securityText.status : false}
-                        setInput={(value) => setSecurityText(value)} />
+                        onChange={setSecurityText} />
                     </Col>
                     <Col xs="4 p-0 pl-2 security">
                       <InputGroup>
@@ -110,12 +110,12 @@ const LoginScreen = () => {
                     </Col>
                   </Row>
                   <Label className="error-label">{errors ? errors.securityText.message : false}</Label>
-                  <Checkbox label="Remember me on this computer" />
+                  <Checkbox classBoxName="ml--4" classText="text-sm" label="Remember me on this computer" />
                   <Button
                     label="LOG IN"
                     color="primary"
                     className="my-4 full-width"
-                    onSubmit={() => handleOnSubmit()} />
+                    onClick={() => handleOnSubmit()} />
                 </Form>
                 <Row>
                   <Col xs="12 text-center">

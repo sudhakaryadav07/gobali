@@ -71,64 +71,42 @@ const UserManagementScreen = () => {
     }
   }
 
-  // const handleForm = (mode, data) => {
-  //   try {
-  //     if (mode === "create" && !`${userRole}`.includes(DISTRICT_ADMIN)) {
-  //       alert("Access Is Denied: you don't have enough privileges to access this module");
-  //       return;
-  //     }
+  const [todos, setTodos] = useState(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [todosPerPage, setTodoPerPage] = useState(3);
 
-  //     if (mode === "create") {
-  //       setCityObj(null);
-  //       setMode(mode);
-  //       setShowForm(true);
-  //     } else if (data && data.id) {
-  //       setCityObj(data);
-  //       setMode(mode);
-  //       setShowForm(true);
-  //     }
-  //   } catch (e) {
+  const handleClick = (event) => {
 
-  //   }
-  // }
+    setCurrentPage(Number(event.target.id))
 
-  // const handleUpload = async (selectedFile, name, module) => {
-  //   try {
-  //     if (!`${userRole}`.includes(DISTRICT_ADMIN)) {
-  //       alert("Access Is Denied: you don't have enough privileges to access this module");
-  //       return;
-  //     }
-  //     const { id, filePath } = await uploadFile(selectedFile, name, module)
-  //     return { id, filePath };
-  //   } catch (e) {
-  //     console.log('e: ', e);
-  //   }
-  // }
-
-  // const handleSubmit = async (fmode, fCity) => {
-  //   try {
-  //     if (!`${userRole}`.includes(DISTRICT_ADMIN)) {
-  //       alert("Access Is Denied: you don't have enough privileges to access this module");
-  //       return;
-  //     }
-
-  //     return fmode === "create"
-  //       ? dispatch(createCity(fCity))
-  //       : dispatch(updateCity(fCity));
-  //   } catch (e) {
-  //     console.log('e: ', e);
-  //   }
-  // }
+  }
 
 
-  // const handleSetFilter = () => {
-  //   try {
-  //     setSearch("");
-  //     setCityList(cities);
-  //   } catch (e) {
+  const indexOfLastTodo = currentPage * 2;
+  const indexOfFirstTodo = indexOfLastTodo - 3;
+  const currentTodos = users.slice(indexOfFirstTodo, indexOfLastTodo);
 
-  //   }
-  // }
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(users.length / 3); i++) {
+    pageNumbers.push(i);
+  }
+
+  const renderTodos = currentTodos.map((todo, index) => {
+    return <li key={index}>{todo}</li>;
+  });
+
+  const renderPageNumbers = pageNumbers.map(number => {
+    return (
+      <li
+        key={number}
+        id={number}
+        onClick={(e) => handleClick(e)}
+      >
+        {number}
+      </li>
+    );
+  });
+
 
   return (
     <>
@@ -219,6 +197,18 @@ const UserManagementScreen = () => {
             </div>
           </Col>
         </Row>
+
+
+
+        {/* 
+        <div>
+          <ul>
+            {renderTodos}
+          </ul>
+          <ul id="page-numbers" style={{ display: "flex", justifyContent: "space-around" }}>
+            {renderPageNumbers}
+          </ul>
+        </div> */}
 
         {/* {cityForm ?
           <CityForm

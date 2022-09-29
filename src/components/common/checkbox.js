@@ -1,12 +1,12 @@
 import { FormGroup, Label, Input } from 'reactstrap';
 
-const Checkbox = ({ label, className }) => {
+const Checkbox = ({ label, classBoxName, classText }) => {
     try {
         return (
-            <FormGroup className={className} check>
+            <FormGroup className={classBoxName} check>
                 <Input type="checkbox" />
                 {' '}
-                <Label check className='text-xs'>
+                <Label check className={classText}>
                     {label}
                 </Label>
             </FormGroup>

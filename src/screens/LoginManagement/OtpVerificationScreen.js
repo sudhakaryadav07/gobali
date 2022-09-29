@@ -20,12 +20,12 @@ const EmailVerificationScreen = () => {
   return (
     <>
       <img alt="" src={require('../../assets/img/icons/usermanagement/login-background.png')} style={{ position: "absolute" }} />
-      <Container className="pt-lg-7">
+      <Container className="mt-13">
         <Row className="justify-content-center">
           <Col lg="7">
             <Card className="bg-secondary shadow border-0">
               <CardHeader className="px-lg-5 py-lg-5 bg-white text-left">
-                <p className="m-0 p-0 pb-2 label-color text-25">Verification</p>
+                <p className="m-0 p-0 pb-2 label-color text-dxl">Verification</p>
                 <p className="font-size pb-0">Enter your 4 digits code that you recieved on your email..</p>
               </CardHeader>
               <CardBody className="px-lg-5 py-lg-1">
@@ -59,7 +59,7 @@ const EmailVerificationScreen = () => {
                       label="CONTINUE"
                       color="primary"
                       className="my-4 full-width"
-                      onSubmit={() => history.push("/auth/changePassword")} />
+                      onClick={() => history.push("/auth/changePassword")} />
                   </div>
                   <Row className="text-center">
                     <Col xs="12 justify-content-center mt-2 mb-2">

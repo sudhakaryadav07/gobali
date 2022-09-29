@@ -17,7 +17,7 @@ const SuccessfullyUpdatePasswordScreen = () => {
   return (
     <>
       <img alt="" src={require('../../assets/img/icons/usermanagement/login-background.png')} style={{ position: "absolute" }} />
-      <Container className="pt-lg-7">
+      <Container className="mt-13">
         <Row className="justify-content-center">
           <Col lg="7">
             <Card className="bg-secondary shadow border-0">
@@ -32,7 +32,7 @@ const SuccessfullyUpdatePasswordScreen = () => {
                     </Col>
                     <Col xs="12 p-0 text-center">
                       <CardHeader className="px-lg-5 py-lg-5 bg-white text-center">
-                        <p className="m-0 p-0 pb-2 label-color text-25">Successfully</p>
+                        <p className="m-0 p-0 pb-2 label-color text-dxl">Successfully</p>
                         <p className="font-size pb-0">Your password has been reset successfully.</p>
                       </CardHeader>
                     </Col>

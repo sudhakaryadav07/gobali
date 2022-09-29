@@ -4,14 +4,9 @@ const Pagination = ({ className }) => {
     try {
         return (
             <CPagination className={className}>
-                <PaginationItem className='border-color'>
-                    <PaginationLink
-                        first
-                        href="#"
-                    />
-                </PaginationItem>
                 <PaginationItem>
                     <PaginationLink
+                        label={<i className="fa fa-eye" ></i>}
                         href="#"
                         previous
                     />
@@ -45,12 +40,6 @@ const Pagination = ({ className }) => {
                     <PaginationLink
                         href="#"
                         next
-                    />
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink
-                        href="#"
-                        last
                     />
                 </PaginationItem>
             </CPagination>

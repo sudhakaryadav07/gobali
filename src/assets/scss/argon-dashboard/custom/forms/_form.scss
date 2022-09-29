@@ -18,6 +18,7 @@
 
 .form-control {
     font-size: $input-btn-font-size;
+    color: $black;
 
     &:focus {
         &::placeholder {

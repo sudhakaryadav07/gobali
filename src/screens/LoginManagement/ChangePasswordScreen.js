@@ -63,7 +63,7 @@ const ChangePasswordScreen = () => {
             {renderPasswordMessages()}
             <Card className="bg-secondary shadow border-0">
               <CardHeader className="px-lg-5 pt-5 pb-1 bg-white text-left">
-                <p className="m-0 p-0 pb-2 label-color text-25">New Password</p>
+                <p className="m-0 p-0 pb-2 label-color text-dxl">New Password</p>
                 <p className="font-size pb-0">Set the new password for your account so you can login and access all features.</p>
               </CardHeader>
               <CardBody className="px-lg-5 py-lg-5">
@@ -75,7 +75,7 @@ const ChangePasswordScreen = () => {
                     showPassword={isIncrypted}
                     invalid={errors ? errors.password.status : false}
                     errormsg={errors ? errors.password.message : false}
-                    setInput={(value) => setPassword(value)}
+                    onChange={(value) => setPassword(value)}
                     setPassword={() => setPasswordType(!isIncrypted)} />
                   <PasswordBox
                     label="Confirm Password"
@@ -84,13 +84,13 @@ const ChangePasswordScreen = () => {
                     showPassword={isReIncrypted}
                     invalid={errors ? errors.repassword.status : false}
                     errormsg={errors ? errors.repassword.message : false}
-                    setInput={(value) => setRePassword(value)}
+                    onChange={(value) => setRePassword(value)}
                     setPassword={() => setRePasswordType(!isIncrypted)} />
                   <Button
                     label="UPDATE PASSWORD"
                     color="primary"
                     className="my-4 full-width"
-                    onSubmit={() => handleOnSubmit()} />
+                    onClick={() => handleOnSubmit()} />
                 </Form>
               </CardBody>
             </Card>

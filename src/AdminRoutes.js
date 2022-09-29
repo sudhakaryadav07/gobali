@@ -1,6 +1,7 @@
-import LoginScreen from "screens/LoginManagement/LoginScreen";
+import LoginScreen from "./screens/LoginManagement/LoginScreen";
 import UserManagementScreen from "./screens/UserManagement/UserManagementScreen";
 import ProjectManagementScreen from "./screens/ProjectManagement/ProjectManagementScreen";
+import ProjectManagementDetail from "./screens/ProjectManagement/ProjectManagementDetail";
 
 var routes = [
   {
@@ -19,9 +20,16 @@ var routes = [
   },
   {
     path: "/projects",
-    name: "Ptoject Management",
+    name: "Project Management",
     icon: "fa fa-sticky-note white",
     component: ProjectManagementScreen,
+    layout: "/admin"
+  },
+  {
+    path: "/project/detail",
+    name: "Project Detail",
+    icon: "fa fa-sticky-note white",
+    component: ProjectManagementDetail,
     layout: "/admin"
   }
 ];

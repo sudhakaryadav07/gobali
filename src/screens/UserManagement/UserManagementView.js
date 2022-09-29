@@ -11,7 +11,7 @@ const UserManagementView = ({ loading, rowCount, data, handleForm }) => {
                     <Table className="align-items-center table-flush" responsive>
                         <thead className="thead-light">
                             <tr>
-                                <th scope="col" className="col-1"><Checkbox className="pl-28" /> </th>
+                                <th scope="col" className="col-1"><Checkbox classBoxName="pl-28" /> </th>
                                 <th scope="col" className="col-2">Full Name</th>
                                 <th scope="col" className="col-2">Email Address</th>
                                 <th scope="col" className="col-2">Location</th>

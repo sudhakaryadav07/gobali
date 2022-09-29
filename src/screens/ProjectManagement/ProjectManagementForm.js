@@ -108,16 +108,16 @@ const ProjectManagementForm = ({ isOpen, className, handleModal }) => {
                         <Label className='text-sm'>Assign Project Manager(Multiple Choice if any)</Label>
                     </Col>
                     <Col sm="12" md="12" lg="6" className='ml--4'>
-                        <Checkbox label="Pratik Patil" />
+                        <Checkbox classText='text-xs' label="Pratik Patil" />
                     </Col>
                     <Col sm="12" md="12" lg="6" className='ml--9'>
-                        <Checkbox label="Rocky Dsouza" />
+                        <Checkbox classText='text-xs' label="Rocky Dsouza" />
                     </Col>
                     <Col sm="12" md="12" lg="6" className='ml--4'>
-                        <Checkbox label="Pankaj Dhiria" />
+                        <Checkbox classText='text-xs' label="Pankaj Dhiria" />
                     </Col>
                     <Col sm="12" md="12" lg="6" className='ml--9'>
-                        <Checkbox label="Bhushan Shinde" />
+                        <Checkbox classText='text-xs' label="Bhushan Shinde" />
                     </Col>
                 </Row>
             </ModalBody>
@@ -126,7 +126,7 @@ const ProjectManagementForm = ({ isOpen, className, handleModal }) => {
                     <Button label="Submit" className="full-width" color="primary" onClick={handleCancel} />
                 </Row>
             </ModalFooter>
-        </Modal>
+        </Modal >
     );
 }
 

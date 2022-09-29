@@ -92,7 +92,7 @@ const Sidebar = (props) => {
         {logo ? (
           <NavbarBrand className="pt-0 pb-0"  {...navbarBrandProps}>
             <img alt=""
-              style={{ minWidth: 76, minHeight: 51 }}
+              style={{ minWidth: 75, minHeight: 68.31 }}
               src={require("../../assets/img/icons/usermanagement/user-tata-power.png")} />
           </NavbarBrand>
         ) : null}
