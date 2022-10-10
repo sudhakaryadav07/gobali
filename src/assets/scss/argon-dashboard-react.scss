@@ -61,6 +61,10 @@
 // React Differences
 @import "react/react-differences";
 
+.font-link {
+    font-family: 'Poppins', cursive;
+}
+
 .security {
     display: flex;
     align-items: center;
@@ -81,4 +85,46 @@
 
 .border-radius {
     border-radius: $border-radius;
+}
+
+.user-list-row-header {
+    height: 54px;
+}
+
+.user-list-row {
+    height: 58px;
+}
+
+.user-btn-height {
+    height: 40px !important;
+    width: 110px !important;
+    box-shadow: none !important;
+}
+
+.user-input {
+    height: 40px;
+    width: 245px;
+}
+
+.user-btn-height {
+    height: 40px !important;
+    width: 110px !important;
+    box-shadow: none !important;
+}
+
+.task-btn-height {
+    height: 57px !important;
+    width: 197px !important;
+}
+
+.cust-btn {
+    background-color: #BCAB0E !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.project-list {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    height: 69px;
 }

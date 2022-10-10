@@ -123,6 +123,14 @@ $value in $colors {
 	@include text-emphasis-variant(".text-#{$color}", $value, $ignore-warning: true);
 }
 
+.gtext {
+	color: #535353;
+}
+
+.ptext {
+	color: #2D2D2D;
+}
+
 .text-color {
 	color: red;
 	cursor: pointer;

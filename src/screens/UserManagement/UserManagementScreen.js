@@ -159,7 +159,7 @@ const UserManagementScreen = () => {
                   color="warning"
                   disabled={false}
                   label="+ New User"
-                  className="my-4.full-width mt-4"
+                  className="my-4 full-width mt-4"
                 />
               </Col>
             </Row>

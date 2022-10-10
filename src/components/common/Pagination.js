@@ -11,28 +11,28 @@ const Pagination = ({ className }) => {
                         previous
                     />
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='d-flex align-items-center'>
+                    <PaginationLink className='custom-link' href="#">
                         1
                     </PaginationLink>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='d-flex align-items-center'>
+                    <PaginationLink className='custom-link' href="#">
                         2
                     </PaginationLink>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='d-flex align-items-center'>
+                    <PaginationLink className='custom-link' href="#">
                         3
                     </PaginationLink>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='d-flex align-items-center'>
+                    <PaginationLink className='custom-link' href="#">
                         4
                     </PaginationLink>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='d-flex align-items-center'>
+                    <PaginationLink className='custom-link' href="#">
                         5
                     </PaginationLink>
                 </PaginationItem>

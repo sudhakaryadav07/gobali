@@ -1,8 +1,8 @@
 import { FormGroup, Label as ErrorLabel, Input, Label } from "reactstrap";
 
-const InputBox = ({ label, size, className, placeholder, invalid, errormsg, type, value, onChange }) => {
+const InputBox = ({ label, size, formClassName, className, placeholder, invalid, errormsg, type, value, onChange }) => {
     return (
-        <FormGroup className="mb-3">
+        <FormGroup className={formClassName}>
             <Label>{label}</Label>
             <Input
                 className={className}

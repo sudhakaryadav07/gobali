@@ -1012,6 +1012,7 @@ $footer-heading-font-size: $font-size-sm  !default;
 
   &alt-list-color {
     background-color: lightgray;
+    color: #000;
   }
 }
 
@@ -1063,13 +1064,4 @@ $footer-heading-font-size: $font-size-sm  !default;
 .h6 {
   font-size: $font-size-xs  !important;
   font-weight: $font-weight-light  !important;
-}
-
-.list-border {
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-}
-
-.list-height {
-  height: 55px;
 }
