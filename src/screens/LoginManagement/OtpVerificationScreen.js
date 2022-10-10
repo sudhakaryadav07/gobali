@@ -63,7 +63,7 @@ const EmailVerificationScreen = () => {
                   </div>
                   <Row className="text-center">
                     <Col xs="12 justify-content-center mt-2 mb-2">
-                      <p>If you didn't recieve a code! <a className="text-color" href="#abc">Resend</a></p>
+                      <p>If you didn't recieve a code! <a className="text-color" href="">Resend</a></p>
                     </Col>
                   </Row>
                 </Form>
