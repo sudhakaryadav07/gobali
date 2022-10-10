@@ -1,36 +1,12 @@
 import Button from '../../components/Common/Button.js';
-import React, { useState } from 'react';
-
-import {
-    Container,
-    Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText
-} from 'reactstrap';
-import SelectField from '../../components/Common/SelectField.js';
-import { PERMISSION } from 'config/constants.js';
+import React from 'react';
+import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import InputBox from '../../components/Common/Inputbox.js';
-import Checkbox from '../../components/Common/Checkbox.js';
 import UserHeader from 'components/Headers/UserHeader.js';
 import Pagination from 'components/Common/Pagination.js';
 import { TASK } from 'config/constants.js';
 
-const ProjectManagementDetail = ({ isOpen, className, handleModal }) => {
-
-
-    const [name, setName] = useState();
-    const [assets, setAssets] = useState();
-    const [pincode, setPincode] = useState();
-    const [area, setArea] = useState();
-    const [placeholder, setPlaceholder] = useState();
-    const [description, setDescription] = useState();
-
-    const handleCancel = () => {
-        try {
-            handleModal(!isOpen);
-        } catch (e) {
-
-        }
-
-    };
+const ProjectManagementDetail = () => {
 
     return (
         <>

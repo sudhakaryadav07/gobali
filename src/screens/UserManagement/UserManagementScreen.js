@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
 import { FormGroup, Label, Col, Container, Row } from "reactstrap";
 import UserHeader from "../../components/Headers/UserHeader";
 import UserManagementView from './UserManagementView';
@@ -14,99 +13,27 @@ import { PERMISSION } from "config/constants";
 import { JOINED } from "config/constants";
 
 const UserManagementScreen = () => {
-  const dispatch = useDispatch();
-
-  // const { userRole, userSavedSearch } = useSelector((state) => state.userLogin);
-  // const { loading: loadingList, error: errorList, cities } = useSelector((state) => state.cityList);
-  // const { loading: loadingCreate, error: errorCreate } = useSelector((state) => state.cityCreate);
-  // const { loading: loadingUpdate, error: errorUpdate } = useSelector((state) => state.cityUpdate);
 
   const [rowCount, setRowCount] = useState();
   const [permission, setPermission] = useState();
   const [joined, setJoined] = useState();
   const [users, setUsers] = useState(DATA);
 
-  const [mode, setMode] = useState("create");
   const [search, setSearch] = useState("");
-  const [error, setError] = useState("");
   const [loading, setLoader] = useState(false);
-
-  // useEffect(() => {
-  //   if (loadingList || loadingCreate || loadingUpdate) {
-  //     setLoader(true)
-  //   } else {
-  //     setLoader(false)
-  //   }
-  // }, [loadingList, loadingCreate, loadingUpdate]);
-
-  // useEffect(() => {
-  //   if (errorList) {
-  //     setError(errorList)
-  //   } else if (errorCreate) {
-  //     setError(errorCreate)
-  //   } else if (errorUpdate) {
-  //     setError(errorUpdate)
-  //   } else {
-  //     setError(null)
-  //   }
-  // }, [errorList, errorCreate, errorUpdate]);
-
-  // useEffect(() => {
-  //   try {
-  //     if (loadingCreate || loadingUpdate) return;
-  //     dispatch(fetchAllCity()).then(data => setCityList(data));
-  //   } catch (e) {
-  //     console.log('e: ', e);
-  //   }
-  // }, [dispatch, loadingCreate, loadingUpdate]);
 
   const handleSearch = async (search) => {
     try {
       if (!search) setUsers(DATA);
+      setLoader(true);
       setSearch(search);
       let filteredUsers = await DATA.filter(item => item.name.toLowerCase().indexOf(search.toLowerCase()) >= 0);
       setUsers(filteredUsers);
+      setLoader(false);
     } catch (e) {
       console.log("handleUserSearch-->".e)
     }
   }
-
-  const [todos, setTodos] = useState(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [todosPerPage, setTodoPerPage] = useState(3);
-
-  const handleClick = (event) => {
-
-    setCurrentPage(Number(event.target.id))
-
-  }
-
-
-  const indexOfLastTodo = currentPage * 2;
-  const indexOfFirstTodo = indexOfLastTodo - 3;
-  const currentTodos = users.slice(indexOfFirstTodo, indexOfLastTodo);
-
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(users.length / 3); i++) {
-    pageNumbers.push(i);
-  }
-
-  const renderTodos = currentTodos.map((todo, index) => {
-    return <li key={index}>{todo}</li>;
-  });
-
-  const renderPageNumbers = pageNumbers.map(number => {
-    return (
-      <li
-        key={number}
-        id={number}
-        onClick={(e) => handleClick(e)}
-      >
-        {number}
-      </li>
-    );
-  });
-
 
   return (
     <>
@@ -197,29 +124,6 @@ const UserManagementScreen = () => {
             </div>
           </Col>
         </Row>
-
-
-
-        {/* 
-        <div>
-          <ul>
-            {renderTodos}
-          </ul>
-          <ul id="page-numbers" style={{ display: "flex", justifyContent: "space-around" }}>
-            {renderPageNumbers}
-          </ul>
-        </div> */}
-
-        {/* {cityForm ?
-          <CityForm
-            mode={mode}
-            cityObj={cityObj}
-            cityList={cityList}
-            handleUpload={handleUpload}
-            handleSubmit={handleSubmit}
-            authAccess={`${userRole}`.includes(DISTRICT_ADMIN)}
-            setShowForm={setShowForm}
-          /> : null} */}
       </Container >
     </>
   );
