@@ -46,7 +46,7 @@ const ProjectManagementDetail = () => {
                                         From List
                                     </Col>
                                 </Row>
-                                <Container className='m-0 p-0' style={{ height: 175, overflow: "auto" }}>
+                                <Container className='m-0 p-0' style={{ height: 250, overflow: "auto" }}>
                                     {TASK.map((item, i) => {
                                         return <Row key={i} className='m-0 mb-1 h3 project-list'>
                                             <Col sm="12" md="12" lg="2" className='h5 mb-0 d-flex align-items-center gtext'>
@@ -67,12 +67,13 @@ const ProjectManagementDetail = () => {
                                         </Row>
                                     })}
                                 </Container>
-                                <Row className='mb-2 h6'>
+                                <Row className='h6'>
                                     <Col sm="12" md="12" lg="12" className='d-flex justify-content-start'>
                                         <Button
                                             size="bg"
                                             label="CREATE FORM"
-                                            className="cust-btn text-xs full-width mt-4"
+                                            color="primary"
+                                            className="cust-btn text-xs full-width"
                                         />
                                     </Col>
                                 </Row>
@@ -80,7 +81,7 @@ const ProjectManagementDetail = () => {
                         </Card>
                     </Col>
                     <Col sm="12" md="12" lg="6" className='pt-2 p-0 pl-2' >
-                        <Card className='full-width' style={{ height: 597 }}>
+                        <Card className='full-width'>
                             <CardBody className='p-4 border-radius'>
                                 <Row className="m-0 h3">
                                     Task Details
@@ -256,23 +257,23 @@ const ProjectManagementDetail = () => {
                                                 </Col>
                                             </Row>
                                             {TASK.map((item, i) => {
-                                                return <Row className='m-0 mb-1 pl-3 h3 d-flex align-items-center'>
-                                                    <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0'>
+                                                return <Row key={i} className='label-coloralt-list-color m-0 user-list-row mb-1 h3 d-flex align-items-center'>
+                                                    <Col sm="12" md="12" lg="1" className='pl-3 h6 mb-0 p-0'>
                                                         Task One
                                                     </Col>
-                                                    <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0'>
+                                                    <Col sm="12" md="12" lg="1" className='pl-3 h6 mb-0 p-0'>
                                                         Thane
                                                     </Col>
-                                                    <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0'>
+                                                    <Col sm="12" md="12" lg="1" className='pl-3 h6 mb-0 p-0'>
                                                         Rockey Dsouza
                                                     </Col>
-                                                    <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0'>
+                                                    <Col sm="12" md="12" lg="1" className='pl-3 h6 mb-0 p-0'>
                                                         10-08-2022
                                                     </Col>
-                                                    <Col sm="12" md="12" lg="2" className='h6 mb-0 p-0'>
+                                                    <Col sm="12" md="12" lg="2" className='pl-3 h6 mb-0 p-0'>
                                                         12-08-2022 / 12:00PM
                                                     </Col>
-                                                    <Col sm="12" md="12" lg="2" className='h6 mb-0 p-0'>
+                                                    <Col sm="12" md="12" lg="2" className='pl-3 h6 mb-0 p-0'>
                                                         13-08-2022 / 14:00PM
                                                     </Col>
                                                     <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0 d-flex'>
