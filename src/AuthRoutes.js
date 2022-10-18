@@ -3,6 +3,7 @@ import EmailVerification from "screens/LoginManagement/EmailVerificationScreen";
 import ChangePassword from "screens/LoginManagement/ChangePasswordScreen";
 import OtpVerification from "screens/LoginManagement/OtpVerificationScreen";
 import SuccessfullyUpdatePassword from "screens/LoginManagement/SuccessfullyUpdatePasswordScreen";
+import UserManagementScreen from "./screens/UserManagement/UserManagementScreen";
 
 var routes = [
   {
@@ -38,6 +39,13 @@ var routes = [
     icon: "ni ni-key-25 text-info",
     component: SuccessfullyUpdatePassword,
     layout: "/auth"
+  },
+  {
+    path: "/users",
+    name: "User Management",
+    icon: "ni ni-key-25 text-info",
+    component: UserManagementScreen,
+    layout: "/admin"
   }
 ];
 export default routes;

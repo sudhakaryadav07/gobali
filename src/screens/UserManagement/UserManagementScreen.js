@@ -1,132 +1,118 @@
+import React, { useState } from 'react';
+import {
+  Row,
+  Col,
+  Container,
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+} from 'reactstrap';
 
-import React, { useState } from "react";
-import { FormGroup, Label, Col, Container, Row } from "reactstrap";
-import UserHeader from "../../components/Headers/UserHeader";
-import UserManagementView from './UserManagementView';
-import Button from '../../components/Common/Button.js';
-import InputBox from '../../components/Common/Inputbox.js';
-import ScrollWrapper from "../../components/Common/ScrollWrapper";
-import SelectField from "../../components/Common/SelectField";
-import { ROWCOUNT, DATA } from "config/constants";
-import Pagination from "../../components/Common/Pagination";
-import { PERMISSION } from "config/constants";
-import { JOINED } from "config/constants";
+const items = [
+  {
+    src: 'https://picsum.photos/id/123/1200/400',
+    altText: 'Slide 1',
+    caption: 'Slide 1',
+    key: 1,
+  },
+  {
+    src: 'https://picsum.photos/id/456/1200/400',
+    altText: 'Slide 2',
+    caption: 'Slide 2',
+    key: 2,
+  },
+  {
+    src: 'https://picsum.photos/id/678/1200/400',
+    altText: 'Slide 3',
+    caption: 'Slide 3',
+    key: 3,
+  },
+];
 
-const UserManagementScreen = () => {
+function Example(args) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
-  const [rowCount, setRowCount] = useState();
-  const [permission, setPermission] = useState();
-  const [joined, setJoined] = useState();
-  const [users, setUsers] = useState(DATA);
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
 
-  const [search, setSearch] = useState("");
-  const [loading, setLoader] = useState(false);
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
 
-  const handleSearch = async (search) => {
-    try {
-      if (!search) setUsers(DATA);
-      setLoader(true);
-      setSearch(search);
-      let filteredUsers = await DATA.filter(item => item.name.toLowerCase().indexOf(search.toLowerCase()) >= 0);
-      setUsers(filteredUsers);
-      setLoader(false);
-    } catch (e) {
-      console.log("handleUserSearch-->".e)
-    }
-  }
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  };
+
+  const slides = items.map((item) => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+      >
+        <img src={item.src} alt={item.altText} style={{ minHeight: "1080px", minWidth: "1920px" }} />
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
+      </CarouselItem>
+    );
+  });
 
   return (
-    <>
-      <UserHeader />
-      <Container className="p-0 display-content secondary">
-        <Row sm="12" md="12" lg="12" className="mt-4 mr-3 ml-3 mb-5">
-          <Col sm="12" md="12" lg="12">
-            <Row className="ml-1"><h2 className="label-color mb-0">User Management</h2></Row>
-            <Row >
-              <Col sm="12" md="12" lg="2" >
-                <InputBox
-                  value={search}
-                  size="medium"
-                  name="search"
-                  type="text"
-                  placeholder="Search Name..."
-                  onChange={handleSearch}
-                />
-              </Col>
-              <Col sm="12" md="12" lg="2" >
-                <FormGroup className="mb-3">
-                  <SelectField
-                    className="mt-11"
-                    size="medium"
-                    options={PERMISSION}
-                    value={permission}
-                    onChange={setPermission}
-                  />
-                </FormGroup>
-              </Col>
-              <Col sm="12" md="12" lg="2">
-                <FormGroup className="mb-3">
-                  <SelectField
-                    size="medium"
-                    className="mt-11"
-                    value={joined}
-                    options={JOINED}
-                    onChange={setJoined}
-                  />
-                </FormGroup>
-              </Col>
-              <Col sm="12" md="12" lg="3" />
-              <Col sm="12" md="12" lg="3" className="d-flex justify-content-end">
-                <Button
-                  color="primary"
-                  className="mt-4 mr-4"
-                  label="Export"
-                />
-                <Button
-                  color="warning"
-                  disabled={false}
-                  label="+ New User"
-                  className="my-4 full-width mt-4"
-                />
-              </Col>
-            </Row>
-            <div style={{ border: "1px solid #1261A9", borderRadius: 5, borderTop: 0 }}>
-              <Row className="justify-content-between display-content m-0" sm="12" md="12" lg="12">
-                <ScrollWrapper onScroll={() => { }}>
-                  <UserManagementView
-                    loading={loading}
-                    data={users}
-                    rowCount={rowCount}
-                  />
-                </ScrollWrapper>
-              </Row>
-              <Row className="justify-content-between mt-5 mb-5 mr-2 ml-2">
-                <Col sm="12" md="12" lg="4" >
-                  <Pagination className="mt-2" />
-                </Col>
-                <Col sm="12" md="12" lg="3" >
-                  <Row sm="12" md="12" lg="12" className="justify-content-end">
-                    <Col sm="12" md="12" lg="12" className="d-flex justify-content-end">
-                      <Label className="mt-2 mr-3">Show: </Label>
-                      <FormGroup className="mb-3" style={{ width: "100%" }}>
-                        <SelectField
-                          size="medium"
-                          value={rowCount}
-                          placeholder="Status"
-                          options={ROWCOUNT}
-                          onChange={setRowCount}
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-        </Row>
-      </Container >
-    </>
+    <div>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        {...args}
+      >
+        <CarouselIndicators
+          items={items}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+        />
+      </Carousel>
+      <div >
+      <Row className='mt-3 mb-3'>
+        <Col sm={12} md={12} lg={12} className="d-flex justify-content-center" color='primary'>
+          Travel Highlights
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={12} md={8} lg={8} style={{ backgroundColor: "red" }}>
+          .col
+        </Col>
+        <Col sm={12} md={4} lg={4}>
+          .col
+        </Col>
+        <Col sm={12} md={4} lg={4}>
+          .col
+        </Col>
+      </Row>
+      </div>
+    </div>
   );
-};
+}
 
-export default UserManagementScreen;
+export default Example;

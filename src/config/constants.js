@@ -16,9 +16,9 @@ export const DATA = [
     { name: "Sandeep", email: "s@gmail.com", location: "India,MH", joined: "1, October, 2022", permission: "Viewer" }];
 
 export const TASK = [
-    { name: "Sudhakar yadav", area: "Mira Road", status: "Approved", linked_form: "Form 1", assigned_date: "19/01/2022", submitted_rec: 20, task_name: "Task One", start: "12-08-2022 / 12:00PM" },
-    { name: "Rockey Dsouza", area: "Thane", status: "In-Review", linked_form: "Form 2", assigned_date: "19/01/2022", submitted_rec: 15, task_name: "Task Two", start: "12-08-2022 / 12:00PM" },
-    { name: "Jitu Mishra", area: "America", status: "Rejected", linked_form: "Form 3", assigned_date: "19/01/2022", submitted_rec: 20, task_name: "Task Three", start: "12-08-2022 / 12:00PM" }];
+    { name: "Sudhakar yadav", area: "Mira Road", status: "Approved", color: "success", linked_form: "Form 1", assigned_date: "19/01/2022", submitted_rec: 20, task_name: "Task One", start: "12-08-2022 / 12:00PM" },
+    { name: "Rockey Dsouza", area: "Thane", status: "In-Review", color: "dribbble", linked_form: "Form 2", assigned_date: "19/01/2022", submitted_rec: 15, task_name: "Task Two", start: "12-08-2022 / 12:00PM" },
+    { name: "Jitu Mishra", area: "America", status: "Rejected", color: "danger", linked_form: "Form 3", assigned_date: "19/01/2022", submitted_rec: 20, task_name: "Task Three", start: "12-08-2022 / 12:00PM" }];
 
 export const ROWCOUNT = [
     { name: "5", value: 5 },

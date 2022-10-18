@@ -41,7 +41,7 @@ const SuccessfullyUpdatePasswordScreen = () => {
                     label="CONTINUE"
                     color="primary"
                     className="my-4 full-width"
-                    onSubmit={() => history.push("/")} />
+                    onClick={() => history.push("/admin/users")} />
                 </Form>
               </CardBody>
             </Card>

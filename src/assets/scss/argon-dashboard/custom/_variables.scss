@@ -71,7 +71,7 @@ $colors: map-merge(("blue": $blue,
 );
 
 $default: #172b4d !default;
-$primary: #1261A9 !default;
+$primary: #555555 !default;
 $secondary: #f1f7fe !default;
 $success: $green  !default;
 $info: $teal  !default;
@@ -90,6 +90,7 @@ $youtube: #cd201f !default;
 $slack: #3aaf85 !default;
 $dribbble: #ea4c89 !default;
 $github: #222222 !default;
+$other: #C0A55F !default;
 
 $theme-colors: (
   ) !default;
@@ -1011,7 +1012,7 @@ $footer-heading-font-size: $font-size-sm  !default;
   }
 
   &alt-list-color {
-    background-color: lightgray;
+    background-color: #FAFAFA;
     color: #000;
   }
 }

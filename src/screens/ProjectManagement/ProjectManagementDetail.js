@@ -40,8 +40,8 @@ const ProjectManagementDetail = () => {
                                         <Row>Rocky Dsouza, Pankaj Dhiria</Row>
                                     </Col>
                                 </Row>
-                                <hr className='mt-3 mb-3' />
-                                <Row className='mt-2 mb-2 h6'>
+                                <hr className='mt-3 mb-4' />
+                                <Row className='mt-2 mb-3 h6'>
                                     <Col sm="12" md="12" lg="12" >
                                         From List
                                     </Col>
@@ -208,7 +208,7 @@ const ProjectManagementDetail = () => {
                                                 <InputBox
                                                     value=""
                                                     size="md"
-                                                    className="text-xs mb-0"
+                                                    className="task-input mb-0"
                                                     name="search"
                                                     type="text"
                                                     placeholder="Search Name..."
@@ -279,8 +279,8 @@ const ProjectManagementDetail = () => {
                                                     <Col sm="12" md="12" lg="1" className='h6 mb-0 p-0 d-flex'>
                                                         <Button
                                                             size="sm"
-                                                            color="success"
-                                                            label="Approved"
+                                                            color={item.color}
+                                                            label={item.status}
                                                             className="full-width mt-3 mb-2"
                                                         />
                                                     </Col>
